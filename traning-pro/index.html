@@ -4,49 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>ادارة التدريب الميداني</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
+<body dir="rtl">
+
+    <!-- ================================================= -->
+    <!--                     NAVBAR                        -->
+    <!-- ================================================= -->
 
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="logoo1.png" alt="Logo" class="nav-logo-img">
+                <img src="logoo2.png" alt="Logo" class="nav-logo-img">
                 <span>نظام التدريب</span>
             </div>
 
-            <ul class="nav-links">
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">عن النظام</a></li>
-                <li><a href="#">آلية التدريب</a></li>
-                <li><a href="#">تواصل معنا</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">عن النظام</a></li>
+                    <li><a href="#">آلية التدريب</a></li>
+                    <li><a href="#">تواصل معنا</a></li>
+                </ul>
+
+                <button id="langToggle" class="lang-btn">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
+    <!-- ================================================= -->
+    <!--                  HERO SECTION                     -->
+    <!-- ================================================= -->
+
     <section class="hero">
-        <div class="overlay"></div>
+        <div class="left-panel"></div>
 
-        <div class="content">
-            <div class="logo-wrapper">
-                <img src="logoo1.png" alt="Logo" class="logo">
-            </div>
-            <h1 class="site-name">ادارة التدريب الميداني</h1>
-            <p id="typing-text">
-            </p>
+        <!-- القسم الأزرق المائل -->
+        <div class="overlay-panel">
 
-            <div class="btn-group">
-                <button class="start-btn login-btn">تسجيل دخول</button>
-                <button class="start-btn register-btn">إنشاء حساب</button>
+            <!-- المحتوى الداخلي -->
+            <div class="content">
+
+                <img src="logoo2.png" alt="Logo" class="logo">
+
+                <h1 class="site-name">ادارة التدريب الميداني</h1>
+
+                <p id="typing-text"></p>
+
+                <div class="btn-group">
+                    <button class="start-btn login-btn" id="loginBtn">تسجيل دخول</button>
+                    <button class="start-btn register-btn" id="registerBtn">إنشاء حساب</button>
+                </div>
+
             </div>
 
         </div>
+
     </section>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
@@ -63,17 +85,17 @@
                     setTimeout(typeText, 70);
                 } else {
                     setTimeout(() => {
-                        element.textContent = "";  // يختفي مرة وحدة
+                        element.textContent = "";
                         index = 0;
-                        typeText(); // يعيد الكتابة
+                        typeText();
                     }, 1500);
                 }
             }
 
             typeText();
-
         });
     </script>
+    <script src="js/main.js"></script>
 
 </body>
 
