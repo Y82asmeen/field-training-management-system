@@ -13,7 +13,17 @@ body {
     font-family: 'Cairo', sans-serif;
     overflow-x: hidden; /* يمنع سكرول أفقي بسبب الميلان */
 }
-
+body[dir="ltr"] .content {
+    text-align: center;
+}
+body[dir="ltr"] {
+    font-family: 'Poppins', sans-serif;
+}
+/* لما اللغة إنجليزي */
+body[dir="ltr"] .site-name {
+    font-size: 26px;      /* أصغر شوي */
+    white-space: nowrap;  /* يمنع النزول لسطر ثاني */
+}
 
 /* ================================================= */
 /*                     NAVBAR                        */
@@ -199,6 +209,7 @@ body {
     margin-bottom: 10px;
 }
 #typing-text {
+    max-width: 100%;
     font-size: 20px;
     color: white;
     margin-top: 15px;
@@ -209,6 +220,11 @@ body {
     line-height: 32px;   /* ارتفاع كل سطر */
 
     overflow: hidden;    /* يمنع التمدد */
+}
+
+/* لما اللغة إنجليزي */
+body[dir="ltr"] #typing-text {
+    width: 420px;   /* وسعيه حسب ما يناسبك */
 }
 
 /* ================================================= */
