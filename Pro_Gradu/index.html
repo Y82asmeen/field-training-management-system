@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body dir="rtl">
@@ -21,15 +22,15 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <img src="logoo2.png" alt="Logo" class="nav-logo-img">
-                <span>نظام التدريب</span>
+                <span id="navTitle">نظام التدريب</span>
             </div>
 
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#">الرئيسية</a></li>
-                    <li><a href="#">عن النظام</a></li>
-                    <li><a href="#">آلية التدريب</a></li>
-                    <li><a href="#">تواصل معنا</a></li>
+                    <li><a href="#" id="navHome">الرئيسية</a></li>
+                    <li><a href="#" id="navAbout">عن النظام</a></li>
+                    <li><a href="#" id="navProcess">آلية التدريب</a></li>
+                    <li><a href="#" id="navContact">تواصل معنا</a></li>
                 </ul>
 
                 <button id="langToggle" class="lang-btn">
@@ -54,7 +55,7 @@
 
                 <img src="logoo2.png" alt="Logo" class="logo">
 
-                <h1 class="site-name">ادارة التدريب الميداني</h1>
+                <h1 class="site-name" id="mainTitle">ادارة التدريب الميداني</h1>
 
                 <p id="typing-text"></p>
 
@@ -68,33 +69,7 @@
         </div>
 
     </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const text = "إدارة التدريب الميداني بفعالية وسهولة ل الطلاب والمشرفين الأكاديميين";
-            const element = document.getElementById("typing-text");
-
-            let index = 0;
-
-            function typeText() {
-
-                if (index < text.length) {
-                    element.textContent += text[index];
-                    index++;
-                    setTimeout(typeText, 70);
-                } else {
-                    setTimeout(() => {
-                        element.textContent = "";
-                        index = 0;
-                        typeText();
-                    }, 1500);
-                }
-            }
-
-            typeText();
-        });
-    </script>
+    
     <script src="js/main.js"></script>
 
 </body>
