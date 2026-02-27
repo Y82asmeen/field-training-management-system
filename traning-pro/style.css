@@ -1,68 +1,62 @@
+/* ================================================= */
+/*                 RESET + BODY                      */
+/* ================================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 body {
     direction: rtl;
-    margin: 0;
     font-family: 'Cairo', sans-serif;
+    overflow-x: hidden; /* يمنع سكرول أفقي بسبب الميلان */
 }
 
-/* ================= NAVBAR ================= */
-/* ===== Navbar ===== */
+
+/* ================================================= */
+/*                     NAVBAR                        */
+/* ================================================= */
+
 .navbar {
     width: 100%;
-    height: 70px;               /* ارتفاع واضح */
-    background-color: #d16a09dd /*#2254af#1e3b72*/;
+    height: 70px; /* ارتفاع ثابت */
+    background: linear-gradient(to left,#3b73db/* #1e3b72*/,#18325e /*#2a5298*/); /* تدرج أنعم */
     position: fixed;
     top: 0;
     z-index: 1000;
-
     display: flex;
 }
 
-/* الحاوية */
+
 .nav-container {
     width: 90%;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
-    align-items: center;   /* هذا اللي بخليهم بنص الارتفاع */
-    height: 100%;          /* مهم جداً */
+    align-items: center; /* محاذاة عمودية كاملة */
+    height: 100%;
 }
-.navbar {
-    height: 60px; /* ثبتي الارتفاع */
-}
-/* ترتيب اللوغو الصغير مع النص */
-.nav-logo {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
 
+.nav-logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* مسافة بين الصورة والنص */
-}
-
-/* حجم اللوغو داخل النافبار */
-.nav-logo-img {
-    height: 50px;   /* كبّرناه */
-    width: auto;
-}
-.nav-logo {
+    gap: 10px;
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+
+.nav-logo-img {
+    height: 45px; /* حجم مناسب بدون تكبير الشريط */
+    width: auto;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
 .nav-links a {
@@ -76,115 +70,157 @@ body {
     color: #bbdefb;
 }
 
-/* ================= HERO SECTION ================= */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* نفس المسافة بين اللينكات */
+}
+
+.lang-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    color: #18325e;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.lang-btn i {
+    font-size: 26px;   /* كبري الرقم حسب ما بدك */
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+    background-color: #e3f2fd;
+}
+
+/* ================================================= */
+/*                  HERO SECTION                     */
+/* ================================================= */
 
 .hero {
     position: relative;
-    height: 100vh;
-    background: url("ITBackgrraund.jpeg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    direction: rtl;
-    overflow: hidden; /* يمنع أي عنصر يطلع برا السكشن */
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+    overflow: hidden;
 }
 
-/* طبقة الشفافية الأساسية فوق الصورة */
-.overlay {
+.left-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60%; /* عكس عرض الأزرق */
+    height: 100%;
+    background: url("grob.png") center / contain no-repeat;
+    /*background-color: #ffffff;  لون احتياطي */
+    z-index: 0;
+}
+
+/* طبقة التعتيم فوق الصورة */
+.left-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 40, 90, 0.3);
+}
+
+.overlay-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%; 
+    height: 100%;
+    background: linear-gradient(135deg, #1e3b72, #2a5298);
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    
+}
+
+.divider-line {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 45%; /* نفس عرض overlay-panel */
     height: 100%;
-    background: rgba(0, 40, 90, 0.65); /* نفس القيمة تبعتك */
-    z-index: 1; /* تحت المحتوى */
-    pointer-events: none; /* عشان ما تمنع الضغط على الأزرار */
+    width: 4px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.2),
+        rgba(230,230,230,0.9),
+        rgba(255,255,255,0.2)
+    );
+    z-index: 5;
 }
 
-/* الدائرة الشفافة الديكورية */
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: rgba(255,255,255,0.20);
-    border-radius: 50%;
-    top: -200px;
-    right: -200px;
-    z-index: 1; /* نفس مستوى الطبقة */
-}
+/* ================================================= */
+/*                     CONTENT                        */
+/* ================================================= */
 
-/* المحتوى */
 .content {
     position: relative;
-    z-index: 2; /* فوق الطبقات */
-    height: 100vh;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 60px; /* عشان النافبار */
+    max-width: 420px;
 }
 
-/* ================= LOGO ================= */
 
-.logo { 
-width: 350px;
-display: block; 
-margin-top: 70px; 
-cursor: pointer; 
-transition: transform 0.4s ease; 
-filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5)); 
-/*filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));
-*/ /*filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.8));*/ } 
+/* ================================================= */
+/*                     LOGO                          */
+/* ================================================= */
 
-
-
-/* وهج ناعم قريب جداً من اللوغو 
-.logo-wrapper::before {
-    content: "";
-    position: absolute;
-
-    /* أصغر من اللوغو بشوي 
-    width: 360px;
-    height: 360px;
-
-    border-radius: 50%;
-
-    /* وهج ناعم قريب 
-    box-shadow:
-        0 0 15px rgba(255, 255, 255, 0.25),
-        0 0 25px rgba(255, 255, 255, 0.10);
-
-    z-index: -1;
+.logo {
+    width: 280px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 25px rgba(255,255,255,0.3));
 }
-/* الهالة */
 
-/* حركة عند تمرير المؤشر 
 .logo:hover {
     transform: scale(1.1) rotate(3deg);
 }
 
-/* ================= TEXT ================= */
+
+/* ================================================= */
+/*                     TEXT                          */
+/* ================================================= */
 
 .site-name {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 35px;
+    font-size: 32px;
     color: #ffffffef;
+    margin-bottom: 10px;
 }
-
 #typing-text {
-    font-size: 18px;
-    color: #ffffff;
-    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    margin-top: 15px;
     margin-bottom: 25px;
-    min-height: 24px; /* يمنع القفز أثناء الكتابة */
+
+    width: 320px;        /* عرض ثابت */
+    height: 64px;        /* ارتفاع ثابت لسطرين */
+    line-height: 32px;   /* ارتفاع كل سطر */
+
+    overflow: hidden;    /* يمنع التمدد */
 }
 
-/* ================= BUTTONS ================= */
+/* ================================================= */
+/*                     BUTTONS                       */
+/* ================================================= */
+
+.btn-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+}
 
 .start-btn {
     padding: 12px 30px;
@@ -192,328 +228,25 @@ filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     color: white;
 }
 
-/* زر تسجيل الدخول */
+/* حركة احترافية */
+.start-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
 .login-btn {
     background-color: #266e14;
 }
 
-.login-btn:hover {
-    background-color: #266e14;
-    transform: translateY(-3px);
-    filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.50));
-}
-
-/* زر إنشاء حساب */
 .register-btn {
     background-color: #d16a09;
 }
 
-.register-btn:hover {
-    background-color: #d16a09;
-    transform: translateY(-3px);
-    filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.50));
-}
-
-/* تجميع الأزرار */
-.btn-group {
-    margin-top: 10px;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-}
-
-/* تأثير عام عند الهوفر */
 .start-btn:hover {
     transform: translateY(-3px);
     filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.50));
 }
-
-
-
-
-
-
-
-
-
-
-
-/*filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
-    /*filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));*/
-    /*filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.8));*/
-/*
-
-/* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body {
-    direction: rtl;
-}
-.navbar {
-    width: 100%;
-    background-color: #1e3c72;
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #bbdefb;
-}
-
-.nav-login {
-    background-color: white;
-    color: #1e3c72;
-    padding: 5px 15px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.nav-login:hover {
-    background-color: #bbdefb;
-}
-body {
-    margin: 0;
-    font-family: 'Cairo', sans-serif;
-}
-
-/* سكشن الهيرو *
-.hero {
-    position: relative;
-    height: 100vh;
-    background: url("ITbackgraund.jpeg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    direction: rtl;
-}
-
-/* طبقة الشفافية *
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 40, 90, 0.65); /* تحكم بالشفافية هون 
-}*/
-/* المحتوى 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-}*/
-/*.hero {
-    margin-top: 80px;
-}
-
-/* واجهة الترحيب */
-/*.hero {
-    position: relative;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-.hero {
-    position: relative;
-    height: 100vh;
-    background: linear-gradient(135deg, #679af8f9, #97bdff);
-    overflow: hidden;
-}*/
-/*.hero::before {
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: rgba(255,255,255,0.20);
-    border-radius: 50%;
-    top: -200px;
-    right: -200px;
-}
-/* الدمج مع اللون الأبيض من الأسفل 
-.overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40%;
-    background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,0),
-        white
-    );
-}*/
-/* المحتوى بالمنتصف */
-/*.content {
-    position: relative;
-    height: 100vh;              /* خليه ياخد طول الشاشة كامل 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    /* يخليهم بالنص عمودي 
-    align-items: center;
-    text-align: center;
-    padding-top: 60px;          /* ينزلهم لتحت شوي 
-}
-
-.logo {
-    width: 350px;
-    display: block;
-    margin-top: 30px;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-    filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.40));
-
-}
-
-.logo:hover {
-    transform: scale(1.1) rotate(3deg);
-}
-@keyframes popIn {
-    0% {
-        transform: scale(0) rotate(-180deg);
-        opacity: 0;
-    }
-    70% {
-        transform: scale(1.2) rotate(20deg);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1) rotate(0deg);
-    }
-}
-#typing-text {
-    font-size: 18px;
-    color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    min-height: 24px;
-}
-/*.logo {
-    width: 350px;
-    display: block;
-    margin-top: 30px;
-    margin-bottom: 0;
-    cursor: pointer;
-
-    /* حركة الانبثاق أول ما الصفحة تفتح 
-    animation: popIn 1.2s ease-out forwards;
-
-    transition: transform 0.4s ease;
-}
-.logo:hover {
-    transform: scale(1.1) rotate(3deg);
-}*/
-/*.overlay {
-    pointer-events: none;
-}
-/*
-@keyframes popIn {
-    0% {
-        transform: scale(0) rotate(-180deg);
-        opacity: 0;
-    }
-    70% {
-        transform: scale(1.2) rotate(20deg);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1) rotate(0deg);
-    }
-}*/
-/*.site-name {
-    margin-top: 60px;
-    margin-bottom: 15px;
-    font-size: 35px;
-    color: #050633ef;
-}
-.start-btn {
-    padding: 12px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-    color: white;
-}
-/*.start-btn {
-    padding: 12px 30px;
-    font-size: 18px;
-    background-color:#206110;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-
-    /* الظل 
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.80);
-
-}*/
-/*.login-btn {
-    background-color: #266e14;
-}
-.login-btn:hover {
-    background-color: #266e14;
-    transform: translateY(-3px);
-     filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.50));
-}
-.register-btn {
-    background-color: #d16a09;
-}
-.register-btn:hover {
-    background-color: #d16a09;
-    transform: translateY(-3px);
-     filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.50));
-}
-.btn-group {
-    margin-top: 10px;
-    display: flex;
-    gap: 40px;           /* المسافة بينهم */
-   /* justify-content: center;
-}
-.start-btn:hover {
-    /*background-color:#206110;
-    transform: translateY(-3px);
-    /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.40);
-    filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.50));
-}
-*/
