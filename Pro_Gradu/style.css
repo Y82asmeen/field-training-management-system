@@ -216,7 +216,7 @@ body[dir="ltr"] .site-name {
     margin-bottom: 25px;
 
     width: 320px;        /* عرض ثابت */
-    height: 64px;        /* ارتفاع ثابت لسطرين */
+    min-height: 64px;         /* ارتفاع ثابت لسطرين */
     line-height: 32px;   /* ارتفاع كل سطر */
 
     overflow: hidden;    /* يمنع التمدد */
@@ -224,7 +224,8 @@ body[dir="ltr"] .site-name {
 
 /* لما اللغة إنجليزي */
 body[dir="ltr"] #typing-text {
-    width: 420px;   /* وسعيه حسب ما يناسبك */
+    width: 420px;
+    height: 96px;   /* صار في مجال لـ 3 أسطر */
 }
 
 /* ================================================= */
