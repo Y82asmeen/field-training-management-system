@@ -86,6 +86,8 @@ body[dir="ltr"] .site-name {
     gap: 35px; /* نفس المسافة بين اللينكات */
 }
 
+/*زر تبديل اللغه*/  
+
 .lang-btn {
     width: 42px;
     height: 42px;
@@ -143,7 +145,7 @@ body[dir="ltr"] .site-name {
     top: 0;
     width: 45%; 
     height: 100%;
-    background: linear-gradient(135deg, #1e3b72, #2a5298);
+    background: linear-gradient(135deg,#3b73db /*#1e3b72*/,#122a52 /*#2a5298*/);
     clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
     display: flex;
     align-items: center;
@@ -256,11 +258,11 @@ body[dir="ltr"] #typing-text {
 }
 
 .login-btn {
-    background-color: #266e14;
+    background-color: #33831cef;
 }
 
 .register-btn {
-    background-color: #d16a09;
+    background-color:#cb7512f9 ;
 }
 
 .start-btn:hover {
