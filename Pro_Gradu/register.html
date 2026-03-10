@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="register">إنشاء حساب</title>
+
+    <link rel="stylesheet" href="css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="register-page">
+
+    <div class="register-container">
+
+        <!-- اللوجو -->
+        <img src="logoo2.png" class="register-logo" alt="Logo">
+
+        <h2 data-i18n="register">إنشاء حساب</h2>
+
+        <!-- بطاقات اختيار نوع المستخدم -->
+        <div class="user-type">
+            <div class="card student" data-type="student">
+                <div class="icon">👨‍🎓</div>
+                <p data-i18n="student">طالب</p>
+            </div>
+
+            <div class="card supervisor" data-type="supervisor">
+                <div class="icon">👨‍🏫</div>
+                <p data-i18n="supervisor">مشرف</p>
+            </div>
+
+            <div class="card company" data-type="company">
+                <div class="icon">🏢</div>
+                <p data-i18n="company">شركة</p>
+            </div>
+        </div>
+
+        <!-- الفورم -->
+        <form id="registerForm">
+            <input type="hidden" id="userType">
+
+            <label for="name" data-i18n="fullName">الاسم الكامل</label>
+            <input type="text" id="name" required>
+
+            <label for="email" data-i18n="email">البريد الإلكتروني</label>
+            <input type="email" id="email" required>
+
+
+            <label for="password" data-i18n="password">كلمة المرور</label>
+
+            <div class="password-field">
+                <input type="password" id="password" required>
+                <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+            </div>
+
+
+            <label for="confirmPassword" data-i18n="confirmPassword">تأكيد كلمة المرور</label>
+
+            <div class="password-field">
+                <input type="password" id="confirmPassword" required>
+                <i class="fa-solid fa-eye toggle-password" id="toggleConfirm"></i>
+            </div>
+
+            <button type="submit" data-i18n="register">إنشاء حساب</button>
+
+            <p class="login-link">
+                <span data-i18n="alreadyHaveAccount">هل لديك حساب بالفعل؟</span>
+                <a href="login.html" data-i18n="login">تسجيل الدخول</a>
+            </p>
+        </form>
+
+    </div>
+
+    <!-- ربط ملف الترجمة -->
+    <script src="js/translation.js"></script>
+    <script src="js/register.js"></script>
+
+
+</body>
+
+</html>
