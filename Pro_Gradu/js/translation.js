@@ -19,6 +19,9 @@ const translations = {
         confirmPassword: "تأكيد كلمة المرور",
         alreadyHaveAccount: "هل لديك حساب بالفعل؟",
         login: "تسجيل الدخول",
+        passwordWeak: "كلمة المرور ضعيفة (يجب أن تكون 8 خانات على الأقل)",
+        passwordMismatch: "كلمة المرور غير متطابقة",
+        selectUserType: "الرجاء اختيار نوع المستخدم"
 
 
         // تضيفي أي نص جديد هنا
@@ -43,6 +46,9 @@ const translations = {
         confirmPassword: "Confirm Password",
         alreadyHaveAccount: "Already have an account?",
         login: "Login",
+        passwordWeak: "Password is too weak (minimum 8 characters)",
+        passwordMismatch: "Passwords do not match",
+        selectUserType: "Please select a user type"
 
 
         // تضيفي أي نص جديد هنا
