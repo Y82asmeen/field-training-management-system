@@ -37,6 +37,7 @@
                 <p data-i18n="company">شركة</p>
             </div>
         </div>
+        <div id="userTypeError" class="error-message"></div>
 
         <!-- الفورم -->
         <form id="registerForm">
@@ -55,6 +56,7 @@
                 <input type="password" id="password" required>
                 <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
             </div>
+            <div id="passwordStrength" class="error-message"></div>
 
 
             <label for="confirmPassword" data-i18n="confirmPassword">تأكيد كلمة المرور</label>
@@ -63,6 +65,7 @@
                 <input type="password" id="confirmPassword" required>
                 <i class="fa-solid fa-eye toggle-password" id="toggleConfirm"></i>
             </div>
+            <div id="passwordError" class="error-message"></div>
 
             <button type="submit" data-i18n="register">إنشاء حساب</button>
 
