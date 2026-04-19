@@ -13,7 +13,7 @@ const translations = {
         student: "طالب",
         supervisor: "مشرف",
         company: "شركة",
-        fullName: "الاسم الكامل",
+        fullName: "الاسم",
         email: "البريد الإلكتروني",
         password: "كلمة المرور",
         confirmPassword: "تأكيد كلمة المرور",
@@ -21,7 +21,9 @@ const translations = {
         login: "تسجيل الدخول",
         passwordWeak: "كلمة المرور ضعيفة (يجب أن تكون 8 خانات على الأقل)",
         passwordMismatch: "كلمة المرور غير متطابقة",
-        selectUserType: "الرجاء اختيار نوع المستخدم"
+        selectUserType: "الرجاء اختيار نوع المستخدم",
+        continue: "متابعة",
+
 
 
         // تضيفي أي نص جديد هنا
@@ -40,7 +42,7 @@ const translations = {
         student: "Student",
         supervisor: "Supervisor",
         company: "Company",
-        fullName: "Full Name",
+        fullName: "Name",
         email: "Email",
         password: "Password",
         confirmPassword: "Confirm Password",
@@ -48,7 +50,8 @@ const translations = {
         login: "Login",
         passwordWeak: "Password is too weak (minimum 8 characters)",
         passwordMismatch: "Passwords do not match",
-        selectUserType: "Please select a user type"
+        selectUserType: "Please select a user type",
+        continue: "continue",
 
 
         // تضيفي أي نص جديد هنا
