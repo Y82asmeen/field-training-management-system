@@ -4,13 +4,10 @@
 
 body {
   margin: 0;
+  height: 850px;
   font-family: 'Cairo', sans-serif;
   background: linear-gradient(135deg, #13385a, #296097, #0f2a44);
   min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   padding: 1px 0;
   box-sizing: border-box;
@@ -26,11 +23,13 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin: 20px 0;
+  margin: 100px auto auto;
   animation: fadeIn 0.8s ease;
+  display: block;
+  margin: 120px auto;
 }
 
-.logo {
+.container .logo {
   width: 100px;
   margin-bottom: 10px;
 }
@@ -83,7 +82,7 @@ body[dir="ltr"] .input-group label {
 
 /* الزر */
 
-button {
+.container button {
   width: 100%;
   padding: 10px;
   margin-top: 16px;
@@ -96,7 +95,7 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+.container button:hover {
   background: #163b5f;
 }
 
@@ -104,18 +103,19 @@ button:hover {
 /*    اتجاه النص حسب اللغة      */
 /* ============================= */
 
-body[dir="rtl"] input,
-body[dir="rtl"] select,
-body[dir="rtl"] textarea {
-  text-align: right;
-  direction: rtl;
+input, select, textarea {
+  width: 100%;
+  box-sizing: border-box;
 }
 
-body[dir="ltr"] input,
-body[dir="ltr"] select,
-body[dir="ltr"] textarea {
+html[dir="rtl"] input,
+html[dir="rtl"] select {
+  text-align: right;
+}
+
+html[dir="ltr"] input,
+html[dir="ltr"] select {
   text-align: left;
-  direction: ltr;
 }
 
 /* ============================= */
@@ -141,3 +141,38 @@ input[name="job_number"] {
     transform: translateY(0);
   }
 }
+
+/* عربي */
+body[dir="rtl"] .password-field input {
+    padding-right: 40px;
+    padding-left: 10px;
+}
+
+/* إنجليزي */
+body[dir="ltr"] .password-field input {
+    padding-left: 40px;
+    padding-right: 10px;
+}
+
+/* الأيقونة */
+body[dir="rtl"] .toggle-password {
+    right: 12px;
+    left: auto;
+}
+
+body[dir="ltr"] .toggle-password {
+    left: 12px;
+    right: auto;
+}
+
+/* ===== FORM DIRECTION FIX ===== */
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+}
+
+/* يخلي كل layout يتبع اللغة تلقائي */
