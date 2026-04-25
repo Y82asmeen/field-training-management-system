@@ -42,6 +42,7 @@ const translations = {
         gpa_label: " * المعدل",
         hours_label: "الساعات المقطوعة",
         phone_label: "رقم الهاتف",
+        invalidPhone: "(079xxxxxxx :مثل) الرجاء إدخال رقم هاتف صحيح",
 
         supervisor_complete_heading: "إكمال بيانات المشرف",
         job_number_label: " * الرقم الوظيفي",
@@ -100,6 +101,7 @@ const translations = {
         gpa_label: "* GPA",
         hours_label: "Completed Hours",
         phone_label: "Phone Number",
+        invalidPhone: "Please enter a valid phone number (e.g. 079xxxxxxx)",
 
         supervisor_complete_heading: "Complete Supervisor Information",
         job_number_label: "* Job Number",
@@ -116,7 +118,8 @@ const translations = {
     }
 };
 
-// دالة لتطبيق الترجمة على جميع العناصر 
+// دالة لتطبيق الترجمة على جميع العناصر  
+
 function setLanguage(lang) {
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
