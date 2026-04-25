@@ -4,14 +4,12 @@
 
 .register-page {
   margin: 0;
+  height: 850px;
   font-family: 'Cairo', sans-serif;
   background: linear-gradient(135deg, #13385a, #296097, #0f2a44);
   min-height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  padding-top: 90px;
   padding: 1px 0;
   /* مسافة صغيرة فوق وتحت */
   box-sizing: border-box;
@@ -27,8 +25,7 @@
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin: 20px 0;
-  /* مسافة صغيرة فوق وتحت */
+  margin: 100px auto 0 auto;  /* مسافة صغيرة فوق وتحت */
 }
 
 .register-logo {
@@ -43,11 +40,12 @@
 
 .user-type {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;   /* بدل space-between */
   gap: 10px;
-  margin: 15px 0 20px 0;
+  flex-wrap: wrap;           /* 👈 مهم جدًا */
 }
 
+/*margin: 15px 0 20px 0;*/
 /* البطاقات */
 
 .card {
@@ -123,24 +121,24 @@
   border-color: #ef6c00;
 }
 
-.error-message{
-color:#c92513;
-font-size:13px;
-margin:8px 0;
-display:none;
-text-align:center;
+.error-message {
+  color: #c92513;
+  font-size: 13px;
+  margin: 8px 0;
+  display: none;
+  text-align: center;
 }
 
-#userTypeError{
-margin-bottom:10px;
+#userTypeError {
+  margin-bottom: 10px;
 }
 
-#userTypeError{
-color:#c92513 !important;
-font-size:13px;
-font-weight:400;
-margin:8px 0;
-text-align:center;
+#userTypeError {
+  color: #c92513 !important;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 8px 0;
+  text-align: center;
 }
 
 /* الحقول */
@@ -163,14 +161,14 @@ input {
   box-sizing: border-box;
 }
 
-input:focus{
+input:focus {
   outline: none;
   border-color: #1d4c7a;
 }
 
 /* الزر */
 
-button {
+.register-container button {
   width: 100%;
   padding: 10px;
   margin-top: 16px;
@@ -224,3 +222,4 @@ body[dir="ltr"] input {
   color: #666;
   font-size: 16px;
 }
+
