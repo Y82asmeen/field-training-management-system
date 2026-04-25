@@ -36,7 +36,12 @@ body[dir="ltr"] .site-name {
     position: fixed;
     top: 0;
     z-index: 1000;
-    display: flex;
+    transition: transform 0.3s ease;
+}
+
+
+.navbar.hide {
+  transform: translateY(-100%);
 }
 
 
