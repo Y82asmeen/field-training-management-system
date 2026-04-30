@@ -1,0 +1,257 @@
+:root {
+    --main-blue: #1e3b72;
+    --light-bg: #f4f7f6;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    --transition: 0.3s ease;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--light-bg);
+    margin: 0;
+}
+
+.admin-container {
+    max-width: 1300px;
+    margin: 90px auto 40px;
+    padding: 0 20px;
+}
+
+/* Header */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.content-header h1 { font-size: 26px; color: var(--main-blue); margin: 0; }
+.btn-primary {
+    background: var(--main-blue);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Cairo';
+    transition: var(--transition);
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+
+/* Grid System */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Top Stats Card (Minimal) */
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: var(--card-shadow);
+}
+
+.stat-icon {
+    width: 50px; height: 50px; border-radius: 12px;
+    display: flex; justify-content: center; align-items: center; font-size: 20px;
+}
+
+.bg-light-blue { background: rgba(52, 152, 219, 0.1); color: #3498db; }
+.bg-light-yellow { background: rgba(241, 196, 15, 0.1); color: #f1c40f; }
+.bg-light-green { background: rgba(46, 204, 113, 0.1); color: #2ecc71; }
+
+.stat-details p { margin: 0; color: #777; font-size: 14px; }
+.stat-details h3 { margin: 5px 0 0; font-size: 24px; color: #333; }
+
+/* Status Cards (The Requested Style) */
+.stat-card-status {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.stat-card-status:hover { transform: translateY(-5px); }
+
+.stat-card-status h3 { font-size: 32px; margin: 10px 0 0; color: #333; }
+.stat-card-status i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 55px;
+    opacity: 0.12;
+    line-height: 1;
+}
+
+.border-blue { border-bottom: 5px solid #3498db; }
+.border-green { border-bottom: 5px solid #2ecc71; }
+.border-orange { border-bottom: 5px solid #f39c12; }
+
+.icon-blue { color: #3498db; }
+.icon-green { color: #2ecc71; }
+.icon-orange { color: #f39c12; }
+
+/* Footer Layout */
+.dashboard-footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 30px;
+}
+
+.activity-container {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: var(--card-shadow);
+}
+
+.activity-item { display: flex; gap: 15px; margin-bottom: 5px; }
+.activity-status { display: flex; flex-direction: column; align-items: center; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot.blue { background: #3498db; box-shadow: 0 0 8px rgba(52,152,219,0.4); }
+.dot.green { background: #2ecc71; box-shadow: 0 0 8px rgba(46,204,113,0.4); }
+.line { width: 2px; background: #f0f0f0; flex-grow: 1; margin: 5px 0; }
+
+.activity-info p { margin: 0 0 5px; font-size: 15px; }
+.activity-info .time { font-size: 12px; color: #999; }
+
+/* Quick Actions Mini */
+.actions-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.action-card-mini {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.action-card-mini:hover {
+    border-color: var(--main-blue);
+    background: #fcfdfe;
+    transform: translateY(-3px);
+}
+
+.action-card-mini i { font-size: 24px; color: var(--main-blue); margin-bottom: 12px; display: block; }
+.action-card-mini h4 { margin: 0; font-size: 14px; color: #444; }
+
+.section-title { font-size: 20px; color: var(--main-blue); margin: 30px 0 20px; font-weight: 700; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .stats-grid, .dashboard-footer-grid { grid-template-columns: 1fr; }
+}/* الأنماط الجديدة للترتيب المحدث */
+
+/* حاوية الإجراءات السريعة في الأعلى */
+.quick-actions-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.main-action-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(30, 59, 114, 0.08);
+    border: 1px solid #eef2f6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.main-action-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--main-blue);
+    background: linear-gradient(to bottom, #ffffff, #f8faff);
+}
+
+.main-action-card i {
+    font-size: 45px;
+    color: var(--main-blue);
+    margin-bottom: 20px;
+}
+
+.main-action-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.main-action-card p {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* شبكة الإحصائيات (أصبحت تحت) */
+.stats-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* النشاط الأخير بعرض كامل */
+.full-width-activity .activity-container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.activity-item {
+    display: flex;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+.activity-info p {
+    font-size: 16px;
+    color: #444;
+    margin: 0 0 5px 0;
+}
+
+.activity-info strong {
+    color: var(--main-blue);
+}
+
+/* تحسينات الموبايل */
+@media (max-width: 850px) {
+    .quick-actions-top, .stats-grid-compact {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-action-card {
+        padding: 25px;
+    }
+}
+.quick-actions-top {
+    margin-top: 10px;
+}
+.section-subtitle {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #777;
+    font-size: 14px;
+}
+.full-width-activity {
+    margin-top: 30px;
+}
