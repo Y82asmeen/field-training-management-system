@@ -227,6 +227,11 @@ const form = document.querySelector("form");
           e.preventDefault(); // منع الإرسال
           alert("الرجاء تعبئة جميع الحقول المطلوبة");
         }
+
+        else {
+          e.preventDefault(); // نوقف الإرسال الافتراضي
+          window.location.href = "student-dashboard.html";
+        }
       });
     }
 
