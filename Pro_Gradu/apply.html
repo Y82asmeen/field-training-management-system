@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>تقديم طلب تدريب</title>
+
+    <link rel="stylesheet" href="css/student-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="apply-page">
+
+    <div class="apply-wrapper">
+
+        <!-- Header -->
+        <div class="apply-header">
+            <p data-i18n="applyTitle">صفحة تقديم طلب التدريب</p>
+            <h2 id="companyName">اسم الشركة</h2>
+
+        </div>
+
+        <!-- Content -->
+        <div class="apply-grid">
+
+            <!-- Info -->
+            <div class="apply-info">
+                <h3 data-i18n="companyInfo">معلومات الشركة</h3>
+
+                <div class="info-box">
+                    <p><span data-i18n="location"></span>: <span id="companyLocation"></span></p>
+                    <p><span data-i18n="duration"></span>: <span id="companyDuration"></span></p>
+                    <p><span data-i18n="seats"></span>: <span id="companySeats"></span></p>
+                </div>
+
+                <p class="note" data-i18n="applyNote">
+                    سيتم مراجعة طلبك من قبل الشركة والرد عليه لاحقًا
+                </p>
+            </div>
+
+            <!-- Form -->
+            <div class="apply-form">
+                <h3 data-i18n="submitRequest">تقديم الطلب</h3>
+
+                <textarea data-i18n-placeholder="writeAboutYou"></textarea>
+
+                <button id="sendBtn" data-i18n="sendRequestBtn">
+                    إرسال الطلب
+                </button>
+
+                <p id="statusMsg"></p>
+            </div>
+
+        </div>
+
+        <div class="request-status" id="requestStatus" style="display:none;">
+
+            <h3 data-i18n="requestStatusTitle">حالة الطلب</h3>
+
+            <div id="statusBox" class="status-box pending">
+
+                <span class="status-icon">⏳</span>
+
+                <div class="status-text">
+                    <p id="statusText" data-i18n="statusPending">طلبك قيد الدراسة</p>
+                    <small data-i18n="statusHint">
+                        سيتم إشعارك عند تغيير الحالة
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="company-history">
+
+            <h3 data-i18n="companyRequestsTitle">طلباتك السابقة للشركات</h3>
+
+            <div id="companyHistoryContainer"></div>
+
+        </div>
+
+    </div>
+
+    <script src="js/translation.js"></script>
+    <script src="js/st-da.js"></script>
+
+
+</body>
+
+</html>
