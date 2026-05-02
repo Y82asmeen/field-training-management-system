@@ -53,7 +53,84 @@ const translations = {
         address_label: " * العنوان",
         contact_number_label: " * رقم التواصل",
 
-        save_btn: "حفظ البيانات"
+        save_btn: "حفظ البيانات",
+
+
+
+        trainingCompany: "جهة التدريب",
+        trainingStatus: "حالة التدريب",
+        inProgress: "جاري التدريب",
+        completedweeks: "الأسابيع المكتملة",
+        progress: "نسبة إنجاز التدريب",
+        remainingweeks: "بقي {weeks} أسبوع",
+        viewEvaluation: "عرض تقييم المشرف",
+        uploadReport: "رفع تقرير التدريب الأسبوعي",
+        sendRequest: "إرسال طلب للمشرف الأكاديمي",
+        selectCompany: "اختر جهة التدريب",
+
+
+        dashboard: "الرئيسية",
+        reports: "التقارير",
+        requests: "الطلبات",
+        contact: "تواصل معنا",
+        evaluation: "التقييمات والملاحظات",
+        weeklyReport: "رفع تقرير",
+        request: "تقديم طلب",
+
+
+        //صفحة طلب التدريب بالشركه 
+
+
+        applyTitle: "صفحة تقديم طلب التدريب",
+        companyInfo: "معلومات الشركة",
+        location: "الموقع",
+        duration: "مدة التدريب",
+        seats: "عدد المقاعد",
+        applyNote: "سيتم مراجعة طلبك من قبل الشركة والرد عليه لاحقًا",
+        submitRequest: "تقديم الطلب",
+        writeAboutYou: "اكتب نبذة قصيرة عنك...",
+        sendRequestBtn: "إرسال الطلب",
+        requestStatusTitle: "حالة الطلب",
+        statusPending: "طلبك قيد الدراسة",
+        statusHint: "سيتم إشعارك عند تغيير الحالة",
+
+        companyRequestsTitle: "طلباتك السابقة للشركات",
+        pending: "قيد المراجعة",
+        approved: "مقبول",
+        rejected: "مرفوض",
+
+        //صفحة التقييمات  
+
+        week: "الأسبوع",
+        hours: "ساعة",
+        tasks: "مهام",
+        approved: "معتمد",
+        pending: "قيد المراجعة",
+        supervisorNote: "ملاحظة المشرف",
+        noEvaluations: "لا يوجد تقييمات بعد",
+
+        //صفحة التقارير
+
+        weeklyReportsTitle: "التقارير الأسبوعية",
+
+        finalReport: "التقرير النهائي",
+        weeklyReportText: "تقرير التدريب الأسبوعي",
+
+        approved: "تم القبول",
+        pending: "قيد المراجعة",
+        rejected: "مرفوض",
+        notUploaded: "لم يتم الرفع",
+
+        finalLocked: "غير متاح بعد",
+        waiting: "انتظار",
+        locked: "مقفل",
+
+        uploadFinal: "رفع التقرير النهائي",
+
+        viewReport: "عرض التقرير",
+        reupload: "إعادة رفع",
+
+        week: "الأسبوع",
 
 
 
@@ -111,7 +188,62 @@ const translations = {
         company_field_label: "* Industry",
         address_label: "* Address",
         contact_number_label: "* Contact Number",
-        save_btn: "Save Data"
+        save_btn: "Save Data",
+
+
+        trainingCompany: "Training Company",
+        trainingStatus: "Training Status",
+        inProgress: "In Progress",
+        completedweeks: "Completed Weeks",
+        progress: "Training Progress",
+        remainingweeks: "{weeks} weeks remaining",
+        viewEvaluation: "View Supervisor Evaluation",
+        uploadReport: "Upload Weekly Training Report",
+        sendRequest: "Send Request to Academic Supervisor",
+        selectCompany: "Select Training Company",
+
+        dashboard: "Dashboard",
+        reports: "Reports",
+        requests: "Requests",
+        contact: "Contact",
+        evaluation: "Evaluation and feedback",
+        weeklyReport: "Weekly Report",
+        request: "Request",
+
+
+        //صفحة طلب التدريب من الشركه 
+
+        applyTitle: "Training Application Page",
+        companyInfo: "Company Information",
+        location: "Location",
+        duration: "Training Duration",
+        seats: "Available Seats",
+        applyNote: "Your request will be reviewed by the company and you will be notified later",
+        submitRequest: "Submit Request",
+        writeAboutYou: "Write a short description about yourself...",
+        sendRequestBtn: "Send Request",
+        requestStatusTitle: "Request Status",
+        statusPending: "Your request is under review",
+        statusHint: "You will be notified when the status changes",
+        
+        companyRequestsTitle: "Your Company Applications",
+        pending: "Pending",
+        approved: "Approved",
+        rejected: "Rejected",
+
+        //صفحة التقييمات 
+
+        week: "Week",
+        hours: "Hours",
+        tasks: "Tasks",
+        approved: "Approved",
+        pending: "Pending Review",
+        supervisorNote: "Supervisor Note",
+        noEvaluations: "No evaluations yet",
+
+        //صفحة التقارير 
+
+        weeklyReportsTitle: "Weekly reports",
 
 
         // تضيفي أي نص جديد هنا
@@ -121,12 +253,23 @@ const translations = {
 // دالة لتطبيق الترجمة على جميع العناصر  
 
 function setLanguage(lang) {
+
+    // 🔹 النصوص العادية
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if (translations[lang][key]) {
             el.innerText = translations[lang][key];
         }
     });
+
+    // 🔹 placeholder (الجديد 👇)
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (translations[lang][key]) {
+            el.placeholder = translations[lang][key];
+        }
+    });
+
 }
 
 // دالة لتطبيق اللغة المحفوظة من localStorage عند فتح أي صفحة
@@ -143,5 +286,10 @@ function applySavedLanguage() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  applySavedLanguage();
+    applySavedLanguage();
 });
+
+function t(key) {
+    const lang = localStorage.getItem("language") || "ar";
+    return translations[lang][key] || key;
+}
