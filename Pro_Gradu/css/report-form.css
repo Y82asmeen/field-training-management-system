@@ -1,4 +1,16 @@
 /* ================= Tabs ================= */
+body {
+  background: #3c5fa7;
+  font-family: Arial, sans-serif;
+}
+
+.section-title{
+    text-align: center;
+    color: #fffcfc;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 .tabs {
     display: flex;
     justify-content: center;
@@ -9,29 +21,29 @@
 .tab-btn {
     padding: 10px 18px;
     border: none;
-    background: #e5e7eb;
+    background: #ffffff;
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
 }
 
 .tab-btn.active {
-    background: #4f46e5;
-    color: white;
+    background: #120f43;
+    color: rgb(255, 255, 255);
 }
 
 /* ================= Content ================= */
 .tab-content {
     max-width: 900px;
     margin: auto;
-    background: #fff;
+    background: #ffffff;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .report-header {
-    background: #e4eaf1;
+    background: #c7d8f1;
     padding: 15px;
     border-radius: 15px;
     text-align: center;
@@ -63,7 +75,7 @@
 /* ================= Form ================= */
 
 .guide-box {
-    background: #eff6ff;
+    background: #c7d8f1;
     border: 1px solid #bfdbfe;
     padding: 20px;
     border-radius: 15px;
@@ -73,6 +85,7 @@
     max-width: 700px;
     /* يحدد العرض */
     margin: 0 auto;
+    margin-bottom: 30px;
     /* يخليه بالنص */
     text-align: right;
     /* مناسب للعربي */
@@ -94,17 +107,17 @@
 
 /* نص الملاحظة */
 .note {
-    background: #fff7ed;
+    background: #ffffff;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    color: #9a3412;
+    color: #441f12;
 }
 
 /* النص المهم */
 .important {
     font-weight: bold;
-    color: #dc2626;
+    color: #5c1313;
     margin-bottom: 10px;
 }
 
@@ -162,7 +175,7 @@
     max-width: 900px;
     margin: auto;
     /* توسيط */
-    background: #edf4fe;
+    background: #c7d8f1;
     padding: 25px 30px;
     border-radius: 12px;
     border: 1px solid #c8cedb;
@@ -291,7 +304,7 @@
 #summary .summary-container {
     max-width: 900px;
     margin: auto;
-    background: #edf4fe;
+    background: #c7d8f1;
     padding: 25px 30px;
     border-radius: 12px;
     border: 1px solid #c8cedb;
@@ -381,7 +394,7 @@
 #tasks .tasks-container {
     max-width: 900px;
     margin: auto;
-    background: #edf4fe; /* ✅ نفس اللون */
+    background: #c7d8f1; /* ✅ نفس اللون */
     padding: 25px 30px;
     border-radius: 12px;
     border: 1px solid #c8cedb;
@@ -445,8 +458,8 @@
 }
 
 .save-btn {
-    background: #db7d11;
-    color: white;
+    background: #ffeddd;
+    color: rgb(22, 21, 21);
     padding: 14px 26px; /* كان 10px 18px */
     border: none;
     border-radius: 10px;
@@ -455,52 +468,15 @@
 }
 
 .submit-btn {
-    background: #258b17;
-    color: white;
-    padding: 14px 26px; /* نفس الشي */
+     background: #ffeddd;
+    color: rgb(22, 21, 21);
+    padding: 12px 26px;
     border: none;
-    border-radius: 10px;
-    font-size: 16px; /* 👈 جديد */
+    border-radius: 12px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/* زر إضافة */
-.add-task-btn {
-    background: #4f46e5;
-    color: white;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-/* كرت المهمة */
-.task-card {
-    background: #f9fafb;
-    padding: 18px;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #e5e7eb;
-    position: relative;
-}
-
-/* عنوان */
-.task-card h4 {
-    margin-bottom: 10px;
-}
-
-/* زر حذف */
-.delete-task {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #ef4444;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
 
 .input-error {
   border: 2px solid #a71515 !important;
