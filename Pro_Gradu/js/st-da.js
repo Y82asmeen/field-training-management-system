@@ -204,3 +204,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+//  البوكس للتواصل
+
+
+const btn = document.getElementById("contactBtn");
+const box = document.getElementById("contactBox");
+
+btn.addEventListener("click", function(e){
+  e.preventDefault();
+  box.style.display = box.style.display === "block" ? "none" : "block";
+});
+
+// إغلاق إذا كبست برا
+document.addEventListener("click", function(e){
+  if (!btn.contains(e.target) && !box.contains(e.target)) {
+    box.style.display = "none";
+  }
+});
+
