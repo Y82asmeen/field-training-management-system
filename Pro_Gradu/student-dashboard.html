@@ -29,9 +29,21 @@
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="student-dashboard.html" data-i18n="dashboard">الرئيسية</a></li>
-          <li><a href="#" data-i18n="reports">التقارير</a></li>
-          <li><a href="#" data-i18n="requests">الطلبات</a></li>
-          <li><a href="#" data-i18n="contact">تواصل معنا</a></li>
+
+          <li class="contact-menu">
+            <a href="#" id="contactBtn">تواصل معنا</a>
+
+            <div class="contact-dropdown" id="contactBox">
+              <h4>تواصل معنا</h4>
+              <p>📞 0790000000</p>
+              <p>📧 support@example.com</p>
+            </div>
+          </li>
+
+          <li>
+            <a href="index.html">تسجيل الخروج</a>
+          </li>
+
         </ul>
 
         <button id="langToggle" class="lang-btn">
@@ -112,7 +124,7 @@
         </span>
       </a>
 
-      <a href="request.html" class="action-card">
+      <a href="sup-approval.html" class="action-card">
         <div class="icon request-icon">
           <i class="fa-solid fa-paper-plane"></i>
         </div>
@@ -236,8 +248,14 @@
 
     </section>
 
+    </div>
+
+
     <script src="js/translation.js"></script>
     <script src="js/st-da.js"></script>
+
+
+
 
 </body>
 
