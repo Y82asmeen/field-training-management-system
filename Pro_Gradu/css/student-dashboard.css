@@ -79,6 +79,56 @@ body {
   font-size: 14px;
 }
 
+/* الاشعارات */
+
+.notif-menu {
+  position: relative;
+}
+
+.notif-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 280px;
+  max-height: 300px;
+  background: #ffffff;
+  border: 1px solid #676eff;
+  border-radius: 10px;
+  padding: 15px;
+  display: none;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+/* السهم */
+.notif-dropdown::before {
+   content: "";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+}
+
+.notif-item {
+  padding: 10px;
+  border-bottom: 1px solid #120f0f;
+  font-size: 14px;
+}
+.notif-dropdown{
+  color: #0c1b34;
+  padding: 15px;
+}
+/* حالات */
+.accepted {
+  color: green;
+}
+
+.rejected {
+  color: rgb(228, 2, 2);
+}
+
 
 /* Container */
 .container {
