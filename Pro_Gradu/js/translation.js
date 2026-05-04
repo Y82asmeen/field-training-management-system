@@ -1,5 +1,6 @@
 const translations = {
     ar: {
+        // الرئيسيه 
         navTitle: "نظام التدريب",
         home: "الرئيسية",
         about: "عن النظام",
@@ -10,6 +11,7 @@ const translations = {
         heroTitle: "إدارة التدريب الميداني",
         heroText: "إدارة التدريب الميداني بفعالية وسهولة للطلاب والمشرفين الأكاديميين",
 
+        // انشاء حساب 
         student: "طالب",
         supervisor: "مشرف",
         company: "شركة",
@@ -24,6 +26,7 @@ const translations = {
         selectUserType: "الرجاء اختيار نوع المستخدم",
         continue: "متابعة",
 
+        //  اكمال بيانات الطالب    
         student_complete_heading: "إكمال بيانات الطالب",
         student_id_label: " * الرقم الجامعي",
         major_label: " * التخصص",
@@ -44,10 +47,12 @@ const translations = {
         phone_label: "رقم الهاتف",
         invalidPhone: "(079xxxxxxx :مثل) الرجاء إدخال رقم هاتف صحيح",
 
+        //  اكمال بيانات المشرف
         supervisor_complete_heading: "إكمال بيانات المشرف",
         job_number_label: " * الرقم الوظيفي",
         department_label: " * القسم الأكاديمي",
 
+        //   اكمال بيانات الشركه
         company_complete_heading: "إكمال بيانات الشركة",
         company_field_label: " * مجال الشركة",
         address_label: " * العنوان",
@@ -55,8 +60,7 @@ const translations = {
 
         save_btn: "حفظ البيانات",
 
-
-
+        //   داشبورد للطالب
         trainingCompany: "جهة التدريب",
         trainingStatus: "حالة التدريب",
         inProgress: "جاري التدريب",
@@ -68,11 +72,14 @@ const translations = {
         sendRequest: "إرسال طلب للمشرف الأكاديمي",
         selectCompany: "اختر جهة التدريب",
 
-
         dashboard: "الرئيسية",
-        reports: "التقارير",
-        requests: "الطلبات",
         contact: "تواصل معنا",
+        contact_title: "تواصل معنا",
+        phone: "الهاتف: 📞 0795800510",
+        email: "الايميل: 📧 support@example.com",
+        notifications: "الإشعارات",
+        notifications_title: "الإشعارات",
+        logout: "تسجيل الخروج",
         evaluation: "التقييمات والملاحظات",
         weeklyReport: "رفع تقرير",
         request: "تقديم طلب",
@@ -136,7 +143,11 @@ const translations = {
 
         // تضيفي أي نص جديد هنا
     },
+
+
     en: {
+
+        // الرئيسيه 
         navTitle: "Training System",
         home: "Home",
         about: "About the System",
@@ -147,6 +158,7 @@ const translations = {
         heroTitle: "Field Training Management",
         heroText: "Efficient and seamless field training management for students and academic supervisors",
 
+        // انشاء حساب 
         student: "Student",
         supervisor: "Supervisor",
         company: "Company",
@@ -161,6 +173,7 @@ const translations = {
         selectUserType: "Please select a user type",
         continue: "continue",
 
+        //  اكمال بيانات الطالب   
         student_complete_heading: "Complete Student Information",
         student_id_label: "* Student ID",
         major_label: "* Major",
@@ -180,10 +193,13 @@ const translations = {
         phone_label: "Phone Number",
         invalidPhone: "Please enter a valid phone number (e.g. 079xxxxxxx)",
 
+
+        //  اكمال بيانات المشرف
         supervisor_complete_heading: "Complete Supervisor Information",
         job_number_label: "* Job Number",
         department_label: "* Academic Department",
 
+        //   اكمال بيانات الشركه
         company_complete_heading: "Complete Company Information",
         company_field_label: "* Industry",
         address_label: "* Address",
@@ -191,6 +207,7 @@ const translations = {
         save_btn: "Save Data",
 
 
+        //   داشبورد للطالب
         trainingCompany: "Training Company",
         trainingStatus: "Training Status",
         inProgress: "In Progress",
@@ -203,9 +220,13 @@ const translations = {
         selectCompany: "Select Training Company",
 
         dashboard: "Dashboard",
-        reports: "Reports",
-        requests: "Requests",
-        contact: "Contact",
+        contact: "Contact Us",
+        contact_title: "Contact Us",
+        phone: "Phone: 📞 0795800510",
+        email: "Email: 📧 support@example.com",
+        notifications: "Notifications",
+        notifications_title: "Notifications",
+        logout: "Logout",
         evaluation: "Evaluation and feedback",
         weeklyReport: "Weekly Report",
         request: "Request",
@@ -225,7 +246,7 @@ const translations = {
         requestStatusTitle: "Request Status",
         statusPending: "Your request is under review",
         statusHint: "You will be notified when the status changes",
-        
+
         companyRequestsTitle: "Your Company Applications",
         pending: "Pending",
         approved: "Approved",
