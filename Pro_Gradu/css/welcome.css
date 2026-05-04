@@ -37,6 +37,9 @@ body[dir="ltr"] .site-name {
     top: 0;
     z-index: 1000;
     transition: transform 0.3s ease;
+    
+  overflow: visible; /* 👈 هذا هو الحل السحري */
+
 }
 
 
@@ -89,6 +92,158 @@ body[dir="ltr"] .site-name {
     display: flex;
     align-items: center;
     gap: 35px; /* نفس المسافة بين اللينكات */
+}
+
+/*  الرساله المنبثقه تواصل معنا */
+.contact-menu {
+  color: #000000;
+  position: relative;
+}
+
+.contact-dropdown {
+  position: absolute;
+  top: 50px;
+  right: -20px; /* 👈 بدل 0 عشان يقرب */
+  width: 240px;
+  background: #f3f7ff;
+  border: 1px solid #151212;
+  border-radius: 12px;
+  padding: 15px;
+  display: none;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+
+/* السهم الصغير */
+.contact-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 40px; /* 👈 غيري الرقم لحد ما يزبط ع الكلمة */
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #f3f7ff transparent;
+}
+
+
+/* تنسيق داخلي */
+.contact-dropdown h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.contact-dropdown p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.email-line {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/*  الملاحظات  */
+
+.notes-menu {
+  position: relative;
+}
+
+/* البوكس */
+.notes-dropdown {
+  position: absolute;
+  top: 50px;
+  right: -60px;
+  width: 350px; /* 👈 أكبر */
+  max-height: 400px; /* 👈 مهم */
+  overflow-y: auto; /* 👈 scroll */
+  background: #f3f7ff;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 15px;
+  display: none;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* السهم */
+.notes-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 80px;
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #961065 transparent;
+  
+
+}
+
+/* المحتوى */
+.notes-content {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.notes-content ul {
+  padding-right: 18px;
+  margin-bottom: 10px;
+}
+
+.notes-content li {
+  margin-bottom: 5px;
+}
+
+/*  الية التدريب  */
+
+.process-menu {
+  position: relative;
+}
+
+.process-dropdown {
+  position: absolute;
+  top: 50px;
+  right: -60px;
+  width: 370px;
+  max-height: 420px;
+  overflow-y: auto;
+  background: #f3f7ff;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 15px;
+  display: none;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  z-index: 2000;
+}
+
+/* السهم */
+.process-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #f3f7ff transparent;
+}
+
+/* المحتوى */
+.process-content {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.process-content ul {
+  padding-right: 18px;
+  margin-bottom: 10px;
+}
+
+.process-content li {
+  margin-bottom: 5px;
 }
 
 /*زر تبديل اللغه*/  
