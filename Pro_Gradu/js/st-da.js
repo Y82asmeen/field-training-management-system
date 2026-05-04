@@ -207,19 +207,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //  البوكس للتواصل
 
-
 const btn = document.getElementById("contactBtn");
 const box = document.getElementById("contactBox");
 
-btn.addEventListener("click", function(e){
-  e.preventDefault();
-  box.style.display = box.style.display === "block" ? "none" : "block";
+btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    box.style.display = box.style.display === "block" ? "none" : "block";
 });
 
 // إغلاق إذا كبست برا
+
+document.addEventListener("click", function (e) {
+    if (!btn.contains(e.target) && !box.contains(e.target)) {
+        box.style.display = "none";
+    }
+});
+
+//  ل تسجيل الخروج   
+
+document.getElementById("logoutBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // حذف بيانات المستخدم
+    localStorage.clear();
+
+    // تحويل للصفحة الرئيسية
+    window.location.href = "index.html";
+});
+
+
+
+//   للاشعارات
+
+const notifBtn = document.getElementById("notifBtn");
+const notifBox = document.getElementById("notifBox");
+const notifList = document.getElementById("notifList");
+
+/* بيانات تجريبية (بدل backend حالياً) */
+const notifications = [
+  {
+    id: 1,
+    requestId: 101,
+    status: "accepted",
+    message: "✅ تم قبول طلب التدريب"
+  },
+  {
+    id: 2,
+    requestId: 102,
+    status: "rejected",
+    message: "❌ تم رفض طلب التدريب"
+  }
+];
+
+/* عرض الإشعارات */
+function renderNotifications() {
+  notifList.innerHTML = "";
+
+  notifications.forEach(n => {
+    const div = document.createElement("div");
+    div.classList.add("notif-item", n.status);
+    div.textContent = n.message;
+
+    notifList.appendChild(div);
+  });
+}
+
+renderNotifications();
+
+/* فتح وإغلاق التاب */
+notifBtn.addEventListener("click", function(e){
+  e.preventDefault();
+  notifBox.style.display =
+    notifBox.style.display === "block" ? "none" : "block";
+});
+
+/* إغلاق عند الضغط برا */
 document.addEventListener("click", function(e){
-  if (!btn.contains(e.target) && !box.contains(e.target)) {
-    box.style.display = "none";
+  if (!notifBtn.contains(e.target) && !notifBox.contains(e.target)) {
+    notifBox.style.display = "none";
   }
 });
 
