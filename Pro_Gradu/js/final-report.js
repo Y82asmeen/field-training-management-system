@@ -48,7 +48,12 @@ function isAllowedToSubmitFinal() {
 }
 
 // التابس
+
 document.addEventListener("DOMContentLoaded", function () {
+
+    /* ========================= */
+    /* ✅ التابس (زي ما هو 100%) */
+    /* ========================= */
 
     const tabs = document.querySelectorAll(".tab-btn");
     const tabPanes = document.querySelectorAll(".tab-pane");
@@ -64,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const target = tab.getAttribute("data-tab");
             const targetPane = document.getElementById(target);
 
-            if (targetPane) {  // ✅ الحل
+            if (targetPane) {
                 targetPane.classList.add("active");
             } else {
                 console.warn("Tab not found:", target);
@@ -73,7 +78,55 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+
+    /* ================================= */
+    /* ✅ تحميل التقرير بدون ما يخرب UI */
+    /* ================================= */
+
+    let reports = JSON.parse(localStorage.getItem("reports")) || [];
+
+    let studentId = localStorage.getItem("currentStudentId") || 1;
+
+    let myReport = reports.find(r => r.studentId == studentId);
+
+    console.log(myReport);
+
+    if (myReport) {
+
+        // ✅ التأخير مهم عشان DOM يجهز كامل
+        setTimeout(() => {
+
+            // التوصيات
+            const recommendation = document.querySelector("#recommendation");
+
+            if (recommendation) {
+                recommendation.value = myReport.recommendation;
+                recommendation.setAttribute("readonly", true);
+            }
+
+            // ✅ تعبئة التقييم
+            Object.keys(myReport.evaluation).forEach((key, index) => {
+
+                const value = myReport.evaluation[key];
+
+                if (value) {
+                    const input = document.querySelector(
+                        `input[name="q${index}"][value="${value}"]`
+                    );
+
+                    if (input) {
+                        input.checked = true;
+                        input.disabled = true; // ✅ يمنع الطالب يعدل
+                    }
+                }
+            });
+
+        }, 100); // ✅ هذا سر الحل 😎
+
+    }
+
 });
+
 
 function validateAndSave(tabId) {
 
