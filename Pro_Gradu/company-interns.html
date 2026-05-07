@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="currentInterns">المتدربون الحاليون</title>
+
+    <link rel="stylesheet" href="css/company-interns.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="interns-container">
+
+        <h2 class="page-title" data-i18n="currentInterns">المتدربون الحاليون</h2>
+
+        <div class="interns-grid" id="internsList"></div>
+
+    </div>
+
+    <!-- ✅ صفحة التقييم (مخفي بالبداية) -->
+    <div id="evaluationSection" style="display: none;">
+
+        <h2 id="studentName"></h2>
+
+
+        <div class="report-container">
+
+            <h3>تقييم أداء الطالب (يعبأ من قبل المشرف)</h3>
+
+            <!-- ✅ الهيدر -->
+            <div class="criteria-header">
+                <span>5</span>
+                <span>4</span>
+                <span>3</span>
+                <span>2</span>
+                <span>1</span>
+                <span>المعيار</span>
+            </div>
+
+            <!-- ✅ العناصر (رح تنولد بالجافا) -->
+            <div class="criteria" id="criteriaList"></div>
+
+            <label>توصيات المشرف</label>
+            <textarea id="recommendation"></textarea>
+
+            <div class="signatures">
+                <input placeholder="اسم وتوقيع المشرف">
+                <input placeholder="اسم وتوقيع المدير">
+            </div>
+
+            <div class="stamp">
+                <input placeholder="الختم الرسمي">
+            </div>
+
+        </div>
+
+        <button class="save-btn">ارسال</button>
+
+    </div>
+    <script src="js/translation.js"></script>
+    <script src="js/company-interns.js"></script>
+        
+
+
+</body>
+
+</html>
