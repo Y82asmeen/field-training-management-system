@@ -1,0 +1,253 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #ffe7c996;
+    margin: 0;
+    padding-top: 90px;      /* 👈 مهم */
+
+}
+
+/* 🔝 Navbar */
+
+/* نحافظ على اللون البرتقالي */
+.company-page .navbar {
+
+    background: linear-gradient(to left, #d17a22, #5a2e0c);
+
+}
+
+/* زر تسجيل الخروج */
+.company-page #logoutBtn{
+    
+    font-size: 18px;
+}
+
+/* hover */
+.company-page #logoutBtn:hover {
+
+    color: #ffd4b3;
+}
+
+.company-page .nav-links button a:hover {
+    color: #dc9660;
+}
+
+/* زر اللغة */
+.company-page #langToggle {
+    background: #ffffff;
+    color: #a3560a;
+    
+}
+
+
+/* 📊 Dashboard */
+.dashboard {
+    padding: 30px;
+}
+
+/* 🔢 Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* ✅ الأيقونات */
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ الألوان */
+.icon.yellow {
+    background: #ffebcd;
+    color: #f4a100;
+}
+
+.icon.green {
+    background: #cffee4;
+    color: #28a745;
+}
+
+.icon.blue {
+    background: #d3e5ff;
+    color: #2a7be4;
+}
+
+.card.clickable {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card.clickable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.icon.orange {
+    background: #ffebcd;
+    color: #ff8c00;
+}
+
+/* ✅ الأيقونة نفسها */
+.icon i {
+    font-size: 20px;
+}
+
+
+
+/* 🧑‍🎓 Sections */
+.section {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* 📩 Requests */
+.request {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffe7c9;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+
+
+/* قبول */
+.accept {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 40px;
+    cursor: pointer;
+
+    background: transparent;
+    border: 1.5px solid;
+
+    transition: 0.3s;
+    color: #2e7d32;
+    border-color: #a5d6a7;
+    background: #d2ffd2;
+    font-size: 20px;
+
+}
+
+.accept .icon {
+
+    background: #2e7d32;
+    color: white;
+}
+
+.accept:hover {
+    background: #b1d7b3;
+}
+
+/* رفض */
+.reject {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 50px;
+    cursor: pointer;
+
+    background: transparent;
+    border: 1.5px solid;
+
+    transition: 0.3s;
+    color: #c62828;
+    border-color: #ef9a9a;
+    background: #ffd8d8;
+    font-size: 20px;
+
+}
+
+.reject .icon {
+    background: #c62828;
+    color: white;
+}
+
+.reject:hover {
+    background: #eabbbb;
+}
+
+
+/* 📢 اعلان */
+
+.section input,
+.section textarea {
+    width: 99%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+    border: 1.6px solid #9b9b9b;
+    /* 👈 رمادي فاتح */
+    outline: none;
+    transition: 0.3s;
+
+}
+
+.section input:focus,
+.section textarea:focus {
+    border-color: #1a1a1a;
+    /* 👈 أسود غامق */
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+#publishBtn {
+    font-size: 17px;
+    margin-top: 35px;
+    padding: 10px;
+    background: #d66e18;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* 👈 بالنص */
+    cursor: pointer;
+    /* 👈 هذا اللي بخليه يصير يد */
+    transition: 0.3s;
+
+}
+
+#publishBtn:hover {
+    background: #b85c12;
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
