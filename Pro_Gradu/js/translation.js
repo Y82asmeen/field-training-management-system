@@ -3,7 +3,7 @@ const translations = {
         // الرئيسيه 
         navTitle: "نظام التدريب",
         home: "الرئيسية",
-        about: "عن النظام",
+        notes: "ملاحظات",
         process: "آلية التدريب",
         contact: "تواصل معنا",
         login: "تسجيل دخول",
@@ -61,6 +61,7 @@ const translations = {
         save_btn: "حفظ البيانات",
 
         //   داشبورد للطالب
+        dashboardTitle: "الصفحة الرئيسية | التدريب الميداني",
         trainingCompany: "جهة التدريب",
         trainingStatus: "حالة التدريب",
         inProgress: "جاري التدريب",
@@ -140,6 +141,29 @@ const translations = {
         week: "الأسبوع",
 
 
+        //  صفحة الشركه
+
+        availableSeats: "مقاعد متاحة",
+        accepted: "مقبولين",
+        currentInterns: "المتدربون الحاليون",
+        incomingRequests: "الطلبات الواردة",
+
+        trainingRequests: "طلبات التدريب",
+        publishAd: "نشر إعلان",
+
+        companyNamePlaceholder: "اسم الشركة",
+        companyDescPlaceholder: "نبذة عن الشركة",
+        location: "الموقع",
+        weeks: "عدد الأسابيع",
+        seats: "عدد المقاعد",
+
+        publishBtn: "نشر الإعلان",
+
+        accept: "قبول",
+        reject: "رفض",
+
+        completed: "مكتمل",
+        rateIntern: "تقييم المتدرب",
 
         // تضيفي أي نص جديد هنا
     },
@@ -150,7 +174,7 @@ const translations = {
         // الرئيسيه 
         navTitle: "Training System",
         home: "Home",
-        about: "About the System",
+        notes: "Notes",
         process: "Training Process",
         contact: "Contact Us",
         login: "Login",
@@ -208,6 +232,7 @@ const translations = {
 
 
         //   داشبورد للطالب
+        dashboardTitle: "Home | FTS",
         trainingCompany: "Training Company",
         trainingStatus: "Training Status",
         inProgress: "In Progress",
@@ -265,6 +290,32 @@ const translations = {
         //صفحة التقارير 
 
         weeklyReportsTitle: "Weekly reports",
+
+        //  صفحة الشركه 
+
+        logout: "Logout",
+
+        availableSeats: "Available Seats",
+        accepted: "Accepted",
+        currentInterns: "Current Interns",
+        incomingRequests: "Incoming Requests",
+
+        trainingRequests: "Training Requests",
+        publishAd: "Post Announcement",
+
+        companyNamePlaceholder: "Company Name",
+        companyDescPlaceholder: "About the Company",
+        location: "Location",
+        weeks: "Number of Weeks",
+        seats: "Number of Seats",
+
+        publishBtn: "Publish",
+
+        accept: "Accept",
+        reject: "Reject",
+
+        completed: "completed",
+        rateIntern: "rate intern",
 
 
         // تضيفي أي نص جديد هنا
