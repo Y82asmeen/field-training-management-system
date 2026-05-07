@@ -203,39 +203,53 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
     });
+  }
 
+  /* ============================= */
+  /*        التحقق من النموذج       */
+  /* ============================= */
 
-/* ============================= */
-/*        التحقق من النموذج       */
-/* ============================= */
+  const form = document.querySelector("form");
 
-const form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
 
-    if (form) {
-      form.addEventListener("submit", function (e) {
+      const requiredInputs = form.querySelectorAll("[required]");
+      let valid = true;
 
-        const requiredInputs = form.querySelectorAll("[required]");
-        let valid = true;
-
-        requiredInputs.forEach(input => {
-          if (!input.value.trim()) {
-            valid = false; // في حقل فاضي
-          }
-        });
-
-        if (!valid) {
-          e.preventDefault(); // منع الإرسال
-          alert("الرجاء تعبئة جميع الحقول المطلوبة");
-        }
-
-        else {
-          e.preventDefault(); // نوقف الإرسال الافتراضي
-          window.location.href = "student-dashboard.html";
+      requiredInputs.forEach(input => {
+        if (!input.value.trim()) {
+          valid = false; // في حقل فاضي
         }
       });
-    }
 
-}});
+      if (!valid) {
+        e.preventDefault(); // منع الإرسال
+        alert("الرجاء تعبئة جميع الحقول المطلوبة");
+      }
+
+      //    هون صار التعديل 
+
+      else {
+        e.preventDefault();
+
+        const currentPage = window.location.pathname;
+
+        if (currentPage.includes("student")) {
+          window.location.href = "student-dashboard.html";
+
+        } else if (currentPage.includes("company")) {
+          window.location.href = "company-dashboard.html";
+
+        } else if (currentPage.includes("supervisor")) {
+          window.location.href = "supervisor-dashboard.html";
+        }
+      }
+    });
+  }
+
+
+});
 function initNavbarScroll() {
   let lastScrollY = window.scrollY;
   const navbar = document.querySelector(".navbar");
