@@ -96,13 +96,13 @@
 }
 
 .status-pill.done {
-  background: #ccffde;
-  color: #166534;
+  background: #9dffbf;
+  color: #0b4120;
 }
 
 .status-pill.pending {
-  background: #ffebb4;
-  color: #854d0e;
+  background: #ffe190;
+  color: #4b2b07;
 }
 
 /* =========================
@@ -119,12 +119,12 @@
 }
 
 .icon-box.done {
-  background: #ccffde;
-  color: #166534;
+  background: #9dffbf;
+  color: #0b4120;
 }
 
 .icon-box.pending {
-  background: #ffebb4;
+  background: #ffe190;
   color: #f59e0b;
 }
 
