@@ -58,7 +58,7 @@
 .status-pill {
   padding: 7px 14px;
   border-radius: 999px;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: bold;
   text-align:center;
 }
@@ -68,15 +68,15 @@
 }
 
 .status-pill.pending {
-  background: #fffac1;
+  background: #fff697;
 }
 
 .status-pill.approved {
-  background: #b0ffcc;
+  background: #6cffa0;
 }
 
 .status-pill.rejected {
-  background: #ffe0e0;
+  background: #ffa7a7;
 }
 
 /* =========================
