@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>التقرير النهائي للتدريب</title>
+
+    <!-- ربط CSS -->
+    <link rel="stylesheet" href="css/final-report.css">
+    <link rel="stylesheet" href="css/supervisor-requests.css">
+</head>
+
+<body class="supervisor-final-view">
+
+    <div class="tabs-container">
+
+        <h1 class="page-title">التقرير النهائي</h1>
+
+        <!-- ✅ أزرار التابات -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="instructions">التعليمات</button>
+            <button class="tab-btn " data-tab="info">المعلومات</button>
+            <button class="tab-btn " data-tab="evaluation">تقييم المشرف</button>
+            <button class="tab-btn" data-tab="summary">ملخص التدريب</button>
+            <button class="tab-btn" data-tab="tasks">المهام</button>
+        </div>
+
+        <!-- ✅ محتوى التابات -->
+        <div class="tab-content">
+
+
+            <!-- ================= INSTRUCTIONS ================= -->
+            <div class="tab-pane active" id="instructions">
+
+                <div class="form-card">
+
+                    <h2 class="section-title">تعليمات التقرير النهائي</h2>
+
+                    <!-- ✅ فقرة رئيسية -->
+                    <p class="note-text">
+                        المرفقات المطلوبة 7 ملفات PDF معبأة بشكل صحيح ولجميع الحقول على مسؤولية الطالب:
+                    </p>
+
+                    <!-- ✅ قائمة -->
+                    <ul class="instructions-list">
+
+                        <li>نموذج الموافقة المعتمد</li>
+
+                        <li>
+                            نموذج تقرير 1:
+                            يعد الطالب تقريراً مفصلاً حول ما تم التدريب عليه في أول 10 أيام
+                        </li>
+
+                        <li>
+                            نموذج تقرير 2:
+                            يعد الطالب تقريراً مفصلاً حول ما تم التدريب عليه في ثاني 10 أيام
+                        </li>
+
+                        <li>
+                            نموذج تقرير 3:
+                            يعد الطالب تقريراً مفصلاً حول ما تم التدريب عليه في ثالث 10 أيام
+                        </li>
+
+                        <li>
+                            نموذج تقرير 4:
+                            يعد الطالب تقريراً مفصلاً حول ما تم التدريب عليه في رابع 10 أيام
+                        </li>
+
+                        <li>
+                            جدول ملخص المهام للتقارير مع ملاحظات أفقية وعمودية تبين علاقة كل مهمة بالمشروع أو النظام
+                        </li>
+
+                        <li>
+                            نموذج تقييم التدريب:
+                            يعد الطالب تقريراً نهائياً عند انتهاء مدة التدريب مختوماً من الشركة
+                        </li>
+
+                    </ul>
+
+                    <!-- ✅ ملاحظات -->
+                    <div class="instructions-box">
+
+                        <p>يجب تحميل الملفات الستة على فولدر Google Drive وتسليم الرابط في هذا النموذج بعد توقيعه</p>
+
+                        <p>لن يتم اعتماد التدريب لأي طالب بدون إرفاق التقارير مفصلة حسب المطلوب ومطابقة لنموذج وصف
+                            التدريب</p>
+
+                        <p>يجب أن يتوافق مجموع المدة والتواريخ مع نموذج وصف التدريب</p>
+
+                        <p>يجب أن تكون المهام ضمن وصف التدريب الموافق عليه</p>
+
+                        <p>خلاف ذلك يعتبر الطالب غير مكتمل ويجب إعادة التدريب</p>
+
+                        <p>يمكن للطالب تمديد التدريب مع تقديم طلب رسمي (يعطى غير مكتمل)</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= INFO ================= -->
+            <div class="tab-pane " id="info">
+
+                <div class="form-card">
+
+                    <h2 class="section-title">بيانات الطالب المتدرب</h2>
+
+                    <div class="info-grid">
+
+                        <div class="form-group">
+                            <label>اسم الطالب</label>
+                            <input type="text" name="studentName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الرقم الجامعي</label>
+                            <input type="text" name="studentId" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>التخصص</label>
+                            <input type="text" name="major" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>عدد أيام التدريب</label>
+                            <input type="number" name="days" required>
+                        </div>
+
+                    </div>
+
+                    <!-- فترة التدريب -->
+                    <div class="form-group full-width date-group">
+                        <label>فترة التدريب</label>
+
+                        <div class="date-fields">
+                            <span>من</span>
+                            <input type="date" required>
+
+                            <span>إلى</span>
+                            <input type="date" required>
+                        </div>
+                    </div>
+
+                    <!-- فاصل -->
+                    <div class="section-divider"></div>
+
+                    <h2 class="section-title">بيانات جهة التدريب</h2>
+
+                    <div class="info-grid">
+
+                        <div class="form-group">
+                            <label>اسم جهة التدريب</label>
+                            <input type="text" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>المدينة</label>
+                            <input type="text" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الهاتف</label>
+                            <input type="text" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الفاكس</label>
+                            <input type="text">
+                        </div>
+
+                    </div>
+
+                    <!-- المشرف -->
+                    <div class="info-grid">
+
+                        <div class="form-group">
+                            <label>اسم المشرف المباشر</label>
+                            <input type="text" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>وظيفة المشرف</label>
+                            <input type="text" required>
+                        </div>
+
+                    </div>
+
+                    <!-- الوصف -->
+                    <div class="form-group full-width">
+                        <label>وصف التدريب مفصلاً</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>فقرة موجزة تصف العمل الذي قام به الطالب</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================= EVALUATION ================= -->
+            <div class="tab-pane" id="evaluation">
+
+                <div class="form-card">
+
+                    <h2 class="section-title">تقييم أداء الطالب (يعبأ من قبل المشرف)</h2>
+
+                    <!-- ✅ جدول التقييم -->
+                    <div class="evaluation-table">
+
+                        <!-- ✅ رأس الجدول -->
+                        <div class="eval-header">
+                            <span>المعيار</span>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+
+                        <!-- ✅ الصفوف -->
+                        <div class="eval-row">
+                            <span>الالتزام بأوقات الحضور والانصراف</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                        <div class="eval-row">
+                            <span>الاهتمام بالتدريب والحماس للعمل</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                        <div class="eval-row">
+                            <span>التعاون مع الآخرين</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                        <div class="eval-row">
+                            <span>الإنتاجية وجودة العمل</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                        <div class="eval-row">
+                            <span>تدوين يوميات التدريب</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                        <div class="eval-row">
+                            <span>استخدام المعلومات النظرية</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                        <div class="eval-row">
+                            <span>المبادرة وتحمل المسؤولية</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                        <div class="eval-row">
+                            <span>الكفاءة الفنية</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                        <div class="eval-row">
+                            <span>فرصة التوظيف بالمؤسسة</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                        <div class="eval-row">
+                            <span>التقييم العام</span>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled><input type="radio" disabled>
+                            <input type="radio" disabled>
+                        </div>
+
+                    </div>
+
+                    <!-- ✅ الملاحظات -->
+                    <div class="form-group">
+                        <label>توصيات المشرف</label>
+                        <textarea rows="4" disabled data-skip placeholder="يتم تعبئته من قبل المشرف"></textarea>
+                    </div>
+
+                    <!-- ✅ التوقيع -->
+                    <div class="info-grid">
+
+                        <div class="form-group">
+                            <label>اسم وتوقيع المشرف</label>
+                            <input type="text" disabled data-skip>
+                        </div>
+
+                        <div class="form-group">
+                            <label>اسم وتوقيع المدير</label>
+                            <input type="text" disabled data-skip>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>الختم الرسمي</label>
+                        <input type="text" disabled data-skip>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================= SUMMARY ================= -->
+            <div class="tab-pane" id="summary">
+
+                <div class="form-card">
+
+                    <h2 class="section-title">ثانياً: ملخص ايام التدريب</h2>
+
+                    <p class="note-text">
+                        تفاصيل التدريب مقسمة على فترات حسب التقارير
+                        <span class="red">(تعبأ من قبل الطالب)</span>
+                    </p>
+
+                    <!-- ========= تقرير 1 ========= -->
+                    <div class="report-card">
+
+                        <h3>التقرير 1 (مرحلة 1)</h3>
+
+                        <!-- ✅ بيانات التقرير -->
+                        <div class="report-info">
+
+                            <div>
+                                <label>من</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>إلى</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>عدد الأيام</label>
+                                <input type="number">
+                            </div>
+
+                            <div>
+                                <label>عدد الساعات</label>
+                                <input type="number">
+                            </div>
+
+                        </div>
+
+                        <!-- ✅ فصل -->
+                        <div class="line"></div>
+
+                        <!-- ✅ المهام -->
+                        <div class="task-item">
+                            <span>مهمة 1</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 2</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 3</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 4</span>
+                            <input type="text">
+                        </div>
+
+                    </div>
+
+                    <!-- ========= تقرير 2 ========= -->
+                    <div class="report-card">
+
+                        <h3>التقرير 2 (مرحلة 2)</h3>
+
+                        <!-- ✅ بيانات التقرير -->
+                        <div class="report-info">
+
+                            <div>
+                                <label>من</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>إلى</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>عدد الأيام</label>
+                                <input type="number">
+                            </div>
+
+                            <div>
+                                <label>عدد الساعات</label>
+                                <input type="number">
+                            </div>
+
+                        </div>
+
+                        <!-- ✅ فصل -->
+                        <div class="line"></div>
+
+                        <!-- ✅ المهام -->
+                        <div class="task-item">
+                            <span>مهمة 1</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 2</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 3</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 4</span>
+                            <input type="text">
+                        </div>
+
+                    </div>
+
+                    <!-- ========= تقرير 3 ========= -->
+                    <div class="report-card">
+
+                        <h3>التقرير 3 (مرحلة 3)</h3>
+
+                        <!-- ✅ بيانات التقرير -->
+                        <div class="report-info">
+
+                            <div>
+                                <label>من</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>إلى</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>عدد الأيام</label>
+                                <input type="number">
+                            </div>
+
+                            <div>
+                                <label>عدد الساعات</label>
+                                <input type="number">
+                            </div>
+
+                        </div>
+
+                        <!-- ✅ فصل -->
+                        <div class="line"></div>
+
+                        <!-- ✅ المهام -->
+                        <div class="task-item">
+                            <span>مهمة 1</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 2</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 3</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 4</span>
+                            <input type="text">
+                        </div>
+
+                    </div>
+
+                    <!-- ========= تقرير 4 ========= -->
+                    <div class="report-card">
+
+                        <h3>التقرير 4 (مرحلة 4)</h3>
+
+                        <!-- ✅ بيانات التقرير -->
+                        <div class="report-info">
+
+                            <div>
+                                <label>من</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>إلى</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>عدد الأيام</label>
+                                <input type="number">
+                            </div>
+
+                            <div>
+                                <label>عدد الساعات</label>
+                                <input type="number">
+                            </div>
+
+                        </div>
+
+                        <!-- ✅ فصل -->
+                        <div class="line"></div>
+
+                        <!-- ✅ المهام -->
+                        <div class="task-item">
+                            <span>مهمة 1</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 2</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 3</span>
+                            <input type="text">
+                        </div>
+
+                        <div class="task-item">
+                            <span>مهمة 4</span>
+                            <input type="text">
+                        </div>
+
+                    </div>
+
+
+                    <!-- ✅ المجموع -->
+                    <div class="total-section">
+
+                        <h3>مجموع ما تم التدريب عليه لكامل الفترة</h3>
+
+                        <div class="report-info">
+
+                            <div>
+                                <label>من</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>إلى</label>
+                                <input type="date">
+                            </div>
+
+                            <div>
+                                <label>عدد الأيام</label>
+                                <input type="number">
+                            </div>
+
+                            <div>
+                                <label>عدد الساعات</label>
+                                <input type="number">
+                            </div>
+
+                        </div>
+
+                        <!-- ✅ ملاحظات -->
+                        <p class="red">
+                            يجب أن يتوافق مجموع الساعات مع نموذج وصف التدريب الذي تم الموافقة عليه
+                        </p>
+
+                        <p class="red">
+                            يجب أن يتوافق مجموع المدة وتواريخها مع نموذج وصف التدريب الذي تمت الموافقة عليه
+                        </p>
+
+                    </div>
+
+                    <!-- ✅ الرابط -->
+                    <div class="form-group">
+                        <label>رابط الملفات (Google Drive)</label>
+                        <input type="text">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================= THIRD PART ================= -->
+            <div class="tab-pane" id="tasks">
+
+                <div class="form-card">
+
+                    <h2 class="section-title">
+                        ثالثاً: ملخص المهام وعلاقتها مع التقارير
+                    </h2>
+
+                    <p class="note-text">
+                        جدول يوضح العلاقة بين المهام والتقارير لكل مرحلة
+                        <span class="red">(تعبأ من قبل الطالب)</span>
+                    </p>
+
+                    <!-- ========= مهمة 1 ========= -->
+                    <div class="task-summary-card">
+
+                        <h3>تقرير 1</h3>
+
+                        <div class="task-reports">
+
+                            <div class="report-line">
+                                <span>مهمه 1</span>
+                                <input type="text" placeholder="ما الذي تم في هذه المهمة؟">
+                            </div>
+
+                            <div class="report-line">
+                                <span>مهمه 2</span>
+                                <input type="text">
+                            </div>
+
+                            <div class="report-line">
+                                <span>مهمه 3</span>
+                                <input type="text">
+                            </div>
+
+                            <div class="report-line">
+                                <span>مهمه 4</span>
+                                <input type="text">
+                            </div>
+
+                        </div>
+
+                        <!-- ✅ ملاحظات -->
+                        <textarea class="notes" placeholder="ملاحظات عن هذه المهام"></textarea>
+
+                    </div>
+
+                    <!-- ========= مهمة 2 ========= -->
+                    <div class="task-summary-card">
+                        <h3>تقرير 2</h3>
+
+                        <div class="task-reports">
+                            <div class="report-line"><span>مهمه 1</span><input type="text"
+                                    placeholder="ما الذي تم في هذه المهمة؟"> </div>
+                            <div class="report-line"><span>مهمه 2</span><input type="text"></div>
+                            <div class="report-line"><span>مهمه 3</span><input type="text"></div>
+                            <div class="report-line"><span>مهمه 4</span><input type="text"></div>
+                        </div>
+
+                        <textarea class="notes" placeholder="ملاحظات عن هذه المهام"></textarea>
+                    </div>
+
+                    <!-- ========= مهمة 3 ========= -->
+                    <div class="task-summary-card">
+                        <h3>تقرير 3</h3>
+
+                        <div class="task-reports">
+                            <div class="report-line"><span>مهمه 1</span><input type="text"
+                                    placeholder="ما الذي تم في هذه المهمة؟"></div>
+                            <div class="report-line"><span>مهمه 2</span><input type="text"></div>
+                            <div class="report-line"><span>مهمه 3</span><input type="text"></div>
+                            <div class="report-line"><span>مهمه 4</span><input type="text"></div>
+                        </div>
+
+                        <textarea class="notes" placeholder="ملاحظات عن هذه المهام"></textarea>
+                    </div>
+
+                    <!-- ========= مهمة 4 ========= -->
+                    <div class="task-summary-card">
+                        <h3>تقرير 4</h3>
+
+                        <div class="task-reports">
+                            <div class="report-line"><span>مهمه 1</span><input type="text"
+                                    placeholder="ما الذي تم في هذه المهمة؟"></div>
+                            <div class="report-line"><span>مهمه 2</span><input type="text"></div>
+                            <div class="report-line"><span>مهمه 3</span><input type="text"></div>
+                            <div class="report-line"><span>مهمه 4</span><input type="text"></div>
+                        </div>
+
+                        <textarea class="notes" placeholder="ملاحظات عن هذه المهام"></textarea>
+                    </div>
+                    <!-- ✅ القسم النهائي -->
+                    <div class="final-reflection">
+
+                        <h3>رابعاً: الوصف النهائي</h3>
+
+                        <div class="form-group">
+                            <label>
+                                ماذا تعلمت؟ ما هي الصعوبات؟ وكيف طورت نفسك؟
+                            </label>
+
+                            <textarea rows="6" placeholder="اكتب هنا تجربتك بالتفصيل..."></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- ✅ ربط JS -->
+    <script src="js/final-report.js"></script>
+    <script src="js/supervisor-view-finalreport.js"></script>
+
+</body>
+
+</html>

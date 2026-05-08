@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>نموذج موافقة المشرف</title>
+    <link rel="stylesheet" href="css/sup-approval.css">
+        <link rel="stylesheet" href="css/supervisor-requests.css">
+
+</head>
+
+<body class="doctor-view">
+
+    <div class="tabs-container">
+
+        <h1 class="page-title"> طلب موافقة المشرف على التدريب</h1>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="info">المعلومات</button>
+            <button class="tab-btn" data-tab="description">الوصف</button>
+            <button class="tab-btn" data-tab="details">التفاصيل</button>
+        </div>
+
+        <div class="tab-content">
+
+            <!-- INFO -->
+            <div class="tab-pane active" id="info">
+                <div class="form-card">
+
+                    <h2 class="section-title">بيانات الطالب والجهة</h2>
+
+                    <div class="info-grid">
+                        <div class="form-group">
+                            <label>اسم الطالب والرقم الجامعي</label>
+                            <input type="text" readonly disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الفصل الدراسي المسجل</label>
+                            <input type="text" readonly disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label>عدد الساعات المتبقية للتخرج</label>
+                            <input type="number" readonly disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الفصل المتوقع التخرج فيه</label>
+                            <input type="text" readonly disabled>
+                        </div>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <h3>بيانات الجهة</h3>
+
+                    <div class="info-grid">
+                        <div class="form-group">
+                            <label>اسم الجهة المقترحة للتدريب</label>
+                            <input type="text" readonly disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label>العنوان</label>
+                            <input type="text" readonly disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" readonly disabled>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>طبيعة نشاط وخدمات الشركة وحجمها</label>
+                            <textarea rows="3" readonly disabled></textarea>
+                        </div>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="form-group">
+                        <label>نوع التدريب</label>
+
+                        <div class="training-type">
+                            <label>
+                                <span>دوام كامل وجاهي</span>
+                                <input type="radio" name="trainingType" disabled>
+                            </label>
+
+                            <label>
+                                <span>دوام جزئي وجاهي</span>
+                                <input type="radio" name="trainingType" disabled>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="tab-pane" id="description">
+                <div class="form-card">
+
+                    <h2 class="section-title">الوصف الدقيق لطبيعة التدريب</h2>
+
+                    <div class="form-group">
+                        <label>خيار 1: برمجة</label>
+
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" disabled>
+                                <span>برمجة نظام</span>
+                            </label>
+
+                            <label>
+                                <input type="checkbox" disabled>
+                                <span>برمجة DB</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>خيار 2: نظام محوسب</label>
+
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" disabled>
+                                <span>نظام محوسب</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <!-- STAGES -->
+                    <h3 class="stages-title">
+                        سيكون التدريب في الجهة على شكل أربعة مراحل كالتالي:
+                    </h3>
+
+                    <!-- استبدلت كل input بنفس الفكرة -->
+
+                    <div class="report-card">
+                        <h3>المرحلة 1</h3>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                    </div>
+
+                    <div class="report-card">
+                        <h3>المرحلة 2</h3>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                    </div>
+
+                    <div class="report-card">
+                        <h3>المرحلة 3</h3>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                    </div>
+
+                    <div class="report-card">
+                        <h3>المرحلة 4</h3>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                        <input type="text" readonly disabled>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= DETAILS ================= -->
+            <div class="tab-pane" id="details">
+
+                <div class="form-card">
+
+                    <h2 class="section-title">
+                        تفاصيل أيام التدريب (بدون استثناء)
+                    </h2>
+
+                    <p class="note-text">
+                        يتم تعبئة جميع الحقول التالية لكل يوم تدريب فعلي
+                    </p>
+
+                    <!-- ================= تقرير 1 ================= -->
+                    <div class="report-card">
+                        <h3>تقرير 1 (الأيام 1 – 10)</h3>
+
+                        <!-- 1يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">1</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 2يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">2</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">3</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">4</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">5</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">6</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">7</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">8</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">9</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">10</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ================= تقرير 2 ================= -->
+                    <div class="report-card">
+                        <h3>تقرير 2 (الأيام 11 – 20)</h3>
+
+                        <!-- 1يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">1</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 2يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">2</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">3</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">4</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">5</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">6</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">7</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">8</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">9</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">10</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ================= تقرير 3 ================= -->
+                    <div class="report-card">
+                        <h3>تقرير 3 (الأيام 21 – 30)</h3>
+
+                        <!-- 1يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">1</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 2يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">2</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">3</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">4</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled> 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">5</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">6</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">7</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">8</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">9</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">10</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ================= تقرير 4 ================= -->
+                    <div class="report-card">
+                        <h3>تقرير 4 (الأيام 31 – 40)</h3>
+
+                        <!-- 1يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">1</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 2يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">2</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">3</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">4</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">5</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">6</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">7</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">8</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">9</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled> 
+
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- يوم -->
+                        <div class="day-card">
+
+                            <div class="day-header">
+                                <span class="day-number">10</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" readonly disabled>
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" readonly disabled>
+
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" readonly disabled>
+                                    <span>إلى</span>
+                                    <input type="time" readonly disabled>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <script src="js/sup-approval.js"></script>
+        <script src="js/sup-approval-doctor.js"></script>
+</body>
+
+</html>
