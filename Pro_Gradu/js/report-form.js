@@ -27,19 +27,19 @@ const submitBtn = document.getElementById("submitBtn");
 
 function updateButtons(tab) {
 
-    formActions.style.display = "none";
-    saveBtn.style.display = "none";
-    submitBtn.style.display = "none";
+    if (formActions) formActions.style.display = "none";
+    if (saveBtn) saveBtn.style.display = "none";
+    if (submitBtn) submitBtn.style.display = "none";
 
     if (tab === "info" || tab === "summary") {
-        formActions.style.display = "block";
-        saveBtn.style.display = "inline-block";
+        if (formActions) formActions.style.display = "block";
+        if (saveBtn) saveBtn.style.display = "inline-block";
     }
 
     if (tab === "tasks") {
-        formActions.style.display = "block";
-        saveBtn.style.display = "inline-block";
-        submitBtn.style.display = "inline-block";
+        if (formActions) formActions.style.display = "block";
+        if (saveBtn) saveBtn.style.display = "inline-block";
+        if (submitBtn) submitBtn.style.display = "inline-block";
     }
 }
 
@@ -87,13 +87,15 @@ function saveData() {
     alert("تم الحفظ ✅");
 }
 
-saveBtn.addEventListener("click", () => {
+if (saveBtn) {
+    saveBtn.addEventListener("click", () => {
 
-    if (!validateForm()) return; // ❌ لا تحفظ
+        if (!validateForm()) return;
 
-    saveData(); // ✔ احفظ
+        saveData();
 
-});
+    });
+}
 
 
 // =========================
@@ -122,43 +124,51 @@ if (status === "approved" || status === "pending") {
 // =========================
 // 📌 SUBMIT
 // =========================
-submitBtn.addEventListener("click", (e) => {
+if (submitBtn) {
+    submitBtn.addEventListener("click", (e) => {
 
-    e.preventDefault(); // 🔥 يمنع الريفريش
+        e.preventDefault();
 
-    if (week === "final") {
+        if (week === "final") {
 
-        if (!isAllowedToSubmit()) {
-            alert("التقرير النهائي غير متاح للإرسال بعد ⛔");
+            if (!isAllowedToSubmit()) {
+                alert("التقرير النهائي غير متاح للإرسال بعد ⛔");
+                return;
+            }
+
+        }
+
+        if (status === "approved") {
+            alert("تم إرسال هذا التقرير وتم قبوله ✅");
             return;
         }
 
-    }
+        if (status === "pending") {
+            alert("تم إرسال التقرير وهو قيد المراجعة ⏳");
+            return;
+        }
 
-    if (status === "approved") {
-        alert("تم إرسال هذا التقرير وتم قبوله ✅");
-        return;
-    }
+        if (status === "rejected") {
+            alert("تم رفض هذا التقرير ❌ يمكنك تعديله وإعادة إرساله");
+            return;
+        }
 
-    if (status === "pending") {
-        alert("تم إرسال التقرير وهو قيد المراجعة ⏳");
-        return;
-    }
+        if (!isAllowedToSubmit()) {
+            alert("لم يحن وقت إرسال هذا التقرير بعد ⛔");
+            return;
+        }
 
-    if (!isAllowedToSubmit()) {
-        alert("لم يحن وقت إرسال هذا التقرير بعد ⛔");
-        return;
-    }
+        if (!validateForm()) return;
 
-    if (!validateForm()) return;
+        saveData();
 
-    saveData();
+        localStorage.setItem(`report_status_${week}`, "pending");
 
-    localStorage.setItem(`report_status_${week}`, "pending");
+        alert("تم إرسال التقرير للمشرف ⏳");
 
-    alert("تم إرسال التقرير للمشرف ⏳");
+    });
+}
 
-});
 console.log(status);
 
 // =========================
