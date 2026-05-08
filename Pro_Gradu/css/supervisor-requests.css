@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: #eef3f1;
+}
+
+
+/* ================================= */
+/*             PAGE                  */
+/* ================================= */
+
+.requests-page {
+    padding: 30px;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+
+    margin: 0 0 5px;
+
+    color: #17351d;
+
+    font-size: 34px;
+}
+
+.page-header p {
+
+    margin: 0;
+
+    color: #6c757d;
+
+    font-size: 15px;
+}
+
+/* ================================= */
+/*            REQUEST CARD           */
+/* ================================= */
+
+.request-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.student-info h3 {
+
+    margin: 0 0 6px;
+
+    color: #10243e;
+
+    font-size: 22px;
+}
+
+.student-info p {
+
+    margin: 0;
+
+    color: #7b8794;
+
+    font-size: 14px;
+}
+
+/* الأزرار */
+
+.actions {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* عرض */
+
+.view-btn {
+
+    border: none;
+
+    background: #c2d9ff;
+    color: #0e429e;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #aec2de;
+}
+
+/* قبول */
+
+.accept-btn {
+
+    border: none;
+
+    background: #bdffc9;
+    color: #165c1a;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.accept-btn:hover {
+    background: #9dcea7;
+}
+
+/* رفض */
+
+.reject-btn {
+
+    border: none;
+
+    background: #fecccc;
+    color: #af1313;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.reject-btn:hover {
+    background: #e2a3a3;
+}
+
+
+/*========================*/
+/*   صفحة تقرير الطلب    */
+/*========================*/
+
+/* خلفية الصفحة */
+.doctor-view {
+    background-color: #068416; /* فاتح وأنيق */
+}
+
+/* الكارد الرئيسية */
+.doctor-view .form-card {
+    background-color: #d8ffd3;
+    border: 1px solid #d6e4ff; /* فرق بسيط */
+}
+
+/* كروت التقارير */
+.doctor-view .report-card {
+    background-color: #f7f7f7;
+}
+
+/* كروت الأيام */
+.doctor-view .day-card {
+    background-color: #ffffff;
+    border: 1px solid #e0ecff;
+}
+
+/* العناوين (لمسة خفيفة) */
+.doctor-view .section-title {
+    color: #113c0c;
+}
+
+/* التابات */
+.doctor-view .tab-btn.active {
+    background-color: #1d510f;
+    color: white;
+}
+
+.training-type input[type="radio"] {
+    display: none;
+}
+
+.training-type label::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #585858;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+
+/* لما ينضغط */
+.training-type input[type="radio"]:checked + span::before {
+    border-color: #313930;
+}
+
+/* ======================================*/
+/*  صفحة التقرير النهائي عند الدكتور
+/* ======================================*/
+
+.supervisor-final-view {
+    background-color: #068416;
+}
+
+.supervisor-final-view .form-card{
+    background-color: #c3ffbb;
+}
+
+.supervisor-final-view .task-summary-card {
+    background-color: #b7d9b3;
+}
+
+.supervisor-final-view .tab-btn.active {
+    background: #1d510f;
+    color: white;
+}
