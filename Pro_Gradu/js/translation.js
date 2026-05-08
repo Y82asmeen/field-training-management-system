@@ -77,7 +77,7 @@ const translations = {
         contact: "تواصل معنا",
         contact_title: "تواصل معنا",
         phone: "الهاتف: 📞 0795800510",
-        email: "الايميل: 📧 support@example.com",
+        emails: "الايميل: 📧 support@example.com",
         notifications: "الإشعارات",
         notifications_title: "الإشعارات",
         logout: "تسجيل الخروج",
@@ -165,6 +165,41 @@ const translations = {
         completed: "مكتمل",
         rateIntern: "تقييم المتدرب",
 
+        // داشبورد للدكتور
+
+        trainingRequestsApproval: "طلبات للموافقة",
+        reportsWaiting: "تقارير بانتظار المراجعة",
+        reviewedReports: "تقارير تمت مراجعتها",
+        totalStudents: "إجمالي الطلاب",
+
+        myStudents: "طلابي",
+        viewAll: "عرض الكل",
+
+        reports: "تقارير",
+
+        // صفحة الطلبات ل الدكتور
+
+        trainingRequestsPage: "طلبات التدريب الواردة",
+
+        incomingTrainingRequests: "طلبات التدريب الواردة",
+
+        reviewStudentsRequests: "مراجعة طلبات الطلاب والموافقة عليها",
+
+        viewRequest: "عرض الطلب",
+
+        // صفحة التقارير ل الدكتور 
+
+        studentReportsPage:
+            "تقارير الطالب ",
+
+        studentReportsDesc:
+            "جميع التقارير المرفوعة من الطالب",
+
+        viewReport:
+            "عرض التقرير",
+
+            allStudents:"جميع الطلاب",
+
         // تضيفي أي نص جديد هنا
     },
 
@@ -248,7 +283,7 @@ const translations = {
         contact: "Contact Us",
         contact_title: "Contact Us",
         phone: "Phone: 📞 0795800510",
-        email: "Email: 📧 support@example.com",
+        emails: "Email: 📧 support@example.com",
         notifications: "Notifications",
         notifications_title: "Notifications",
         logout: "Logout",
@@ -316,6 +351,46 @@ const translations = {
 
         completed: "completed",
         rateIntern: "rate intern",
+
+        // داشبورد للدكتور 
+
+        trainingRequestsApproval: "Approval Requests",
+        reportsWaiting: "Reports Waiting Review",
+        reviewedReports: "Reviewed Reports",
+        totalStudents: "Total Students",
+
+        myStudents: "My Students",
+        viewAll: "View All",
+
+        reports: "Reports",
+
+        // صفحة الطلبات ل الدكتور
+
+        trainingRequestsPage:
+            "Incoming Training Requests",
+
+        incomingTrainingRequests:
+            "Incoming Training Requests",
+
+        reviewStudentsRequests:
+            "Review students requests and approve them",
+
+        viewRequest:
+            "View Request",
+
+        // صفحة التقارير ل الدكتور
+
+        studentReportsPage:
+            "Student Reports | FTS",
+
+        studentReportsDesc:
+            "All reports uploaded by the student",
+
+        viewReport:
+            "View Report",
+
+            allStudents:"All students",
+
 
 
         // تضيفي أي نص جديد هنا
