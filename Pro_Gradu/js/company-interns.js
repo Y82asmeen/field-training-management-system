@@ -78,13 +78,48 @@ document.querySelector(".save-btn").addEventListener("click", function (e) {
 
     let results = {};
 
+    let isValid = true; // ✅ للتحقق
+
+    // ❌ إزالة الأحمر القديم
+    document.querySelectorAll(".criteria-row").forEach(row => {
+        row.style.border = "none";
+    });
+
     criteriaList.forEach((item, index) => {
+
         const selected = document.querySelector(`input[name="q${index}"]:checked`);
-        results[item] = selected ? selected.value : null;
+        const row = document.querySelectorAll(".criteria-row")[index];
+
+        if (!selected) {
+            isValid = false;
+
+            // ✅ تلوين الحقل الفاضي
+            if (row) {
+                row.style.border = "2px solid #a60808";
+            }
+        } else {
+            results[item] = selected.value;
+        }
+
     });
 
     const recommendation = document.getElementById("recommendation").value;
 
+    // ✅ تحقق من textarea
+    if (!recommendation.trim()) {
+        isValid = false;
+        document.getElementById("recommendation").style.border = "2px solid #a60808";
+    } else {
+        document.getElementById("recommendation").style.border = "";
+    }
+
+    // ✅ إذا في خطأ
+    if (!isValid) {
+        alert("❌ يجب تعبئة جميع الحقول");
+        return;
+    }
+
+    // ✅ كودك الأصلي بدون تغيير
     const report = {
         studentId: studentId,
         evaluation: results,
@@ -98,6 +133,18 @@ document.querySelector(".save-btn").addEventListener("click", function (e) {
     localStorage.setItem("reports", JSON.stringify(reports));
 
     alert("تم حفظ التقييم ✅");
+
+});
+
+document.addEventListener("change", function (e) {
+
+    if (e.target.type === "radio") {
+        e.target.closest(".criteria-row").style.border = "none";
+    }
+
+    if (e.target.id === "recommendation") {
+        e.target.style.border = "1px solid black";
+    }
 
 });
 
