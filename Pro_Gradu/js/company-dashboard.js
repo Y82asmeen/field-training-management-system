@@ -1,4 +1,4 @@
-//   بطاقة المتدربيين الحاليين
+//   بطاقة المتدربون الحاليون
 
 function goToInterns() {
     window.location.href = "company-interns.html";
@@ -28,7 +28,6 @@ document.getElementById("accepted").textContent = company.accepted;
 document.getElementById("students").textContent = company.students;
 document.getElementById("requests").textContent = company.requests;
 
-// 📩 عرض الطلبات
 
 
 // 📩 عرض الطلبات
@@ -105,3 +104,61 @@ document.documentElement.setAttribute("lang", savedLang);
 document.documentElement.setAttribute("dir", savedLang === "ar" ? "rtl" : "ltr");
 
 setLanguage(savedLang);
+
+const publishBtn = document.getElementById("publishBtn");
+
+if (publishBtn) {
+
+    publishBtn.addEventListener("click", function () {
+
+        const title = document.getElementById("title");
+        const desc = document.getElementById("desc");
+        const location = document.getElementById("location");
+        const weeks = document.getElementById("weeks");
+        const seats = document.getElementById("seatsInput");
+
+        let isValid = true;
+
+        const fields = [title, desc, location, weeks, seats];
+
+        fields.forEach(field => {
+
+            field.style.border = "1px solid black";
+
+            if (!field.value.trim()) {
+                isValid = false;
+                field.style.border = "2px solid #b30000";
+            }
+        });
+
+        if (!isValid) {
+            alert("❌ يجب تعبئة جميع الحقول");
+            return;
+        }
+
+        // ✅ رسالة النجاح
+        alert("✅ تم نشر الإعلان");
+
+        // ✅ ✅ ✅ إضافة جديدة 🔥
+        fields.forEach(field => {
+            field.value = "";                 // تفريغ الحقول
+            field.style.border = "1px solid black"; // إرجاع الشكل الطبيعي
+        });
+
+    });
+
+}
+
+document.addEventListener("input", function (e) {
+
+    if (
+        e.target.id === "title" ||
+        e.target.id === "desc" ||
+        e.target.id === "location" ||
+        e.target.id === "weeks" ||
+        e.target.id === "seatsInput"
+    ) {
+        e.target.style.border = "1px solid black";
+    }
+
+});
