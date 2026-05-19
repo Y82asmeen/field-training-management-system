@@ -187,18 +187,32 @@ const translations = {
 
         viewRequest: "عرض الطلب",
 
+        evaluateReport: "تقييم التقرير",
+
         // صفحة التقارير ل الدكتور 
 
-        studentReportsPage:
-            "تقارير الطالب ",
+        studentReportsPage: "تقارير الطالب ",
 
-        studentReportsDesc:
-            "جميع التقارير المرفوعة من الطالب",
+        studentReportsDesc: "جميع التقارير المرفوعة من الطالب",
 
-        viewReport:
-            "عرض التقرير",
+        viewReport: "عرض التقرير",
 
-            allStudents:"جميع الطلاب",
+        allStudents: "جميع الطلاب",
+
+
+        //  صفحة تقييم التقرير
+
+        reportEvaluationPage: "تقييم التقرير",
+
+        reportEvaluationDesc: "تقييم التقرير وأداء الطالب",
+
+        performanceRating: "تقييم الأداء",
+
+        supervisorNotes: "ملاحظات المشرف",
+
+        writeFeedback: "اكتب ملاحظاتك هنا...",
+
+        saveEvaluation: "حفظ التقييم",
 
         // تضيفي أي نص جديد هنا
     },
@@ -386,10 +400,32 @@ const translations = {
         studentReportsDesc:
             "All reports uploaded by the student",
 
-        viewReport:
-            "View Report",
+        viewReport: "View Report",
 
-            allStudents:"All students",
+        evaluateReport: "Evaluate Report",
+
+        allStudents: "All students",
+
+
+        //  صفحة تقييم التقارير
+
+        reportEvaluationPage:
+            "Report Evaluation",
+
+        reportEvaluationDesc:
+            "Report Evaluation and Student Performance",
+
+        performanceRating:
+            "Performance Rating",
+
+        supervisorNotes:
+            "Supervisor Notes",
+
+        writeFeedback:
+            "Write your feedback here...",
+
+        saveEvaluation:
+            "Save Evaluation",
 
 
 
