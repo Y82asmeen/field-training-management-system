@@ -72,31 +72,40 @@ function renderReports() {
 
             </div>
 
-            <div class="actions">
+           <div class="actions">
 
-                <button class="view-btn"
+    <button class="view-btn"
 onclick="window.location.href='${report.id === 5
                 ? "supervisor-view-finalreport.html"
                 : "supervisor-view-report.html"
             }'">
 
-    ${t("viewReport")}
+        ${t("viewReport")}
+
+    </button>
+
+    <button class="evaluation-btn"
+    onclick="window.location.href='evalu-report.html'">
+
+    <i class="fa-solid fa-star"></i>
+
+    ${t("evaluateReport")}
 
 </button>
 
-                <button class="accept-btn">
+    <button class="accept-btn">
 
-                    ✔ ${t("accept")}
+        ✔ ${t("accept")}
 
-                </button>
+    </button>
 
-                <button class="reject-btn">
+    <button class="reject-btn">
 
-                    ✖ ${t("reject")}
+        ✖ ${t("reject")}
 
-                </button>
+    </button>
 
-            </div>
+</div>
         `;
 
         container.appendChild(card);
