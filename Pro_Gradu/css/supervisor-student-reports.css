@@ -120,6 +120,41 @@ body {
     background: #aec2de;
 }
 
+/* زر تقييم التقرير */
+.evaluation-btn {
+
+    background-color: #fdcc46f5;
+
+    color: rgb(92, 74, 0);
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.evaluation-btn:hover {
+
+    background-color: #f3ba29;
+
+}
+
+
 /* قبول */
 
 .accept-btn {
