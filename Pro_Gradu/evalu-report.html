@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title data-i18n="reportEvaluationPage">
+        تقييم التقرير
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/evalu-report.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- خط -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="evaluation-page">
+
+        <!-- عنوان الصفحة -->
+        <div class="page-header">
+
+            <h1 id="studentName">
+                محمد أحمد
+            </h1>
+
+            <p data-i18n="reportEvaluationDesc">
+                تقييم التقرير وأداء الطالب
+            </p>
+
+        </div>
+
+        <!-- كرت التقييم -->
+        <div class="evaluation-card">
+
+            <!-- التقييم -->
+            <div class="rating-section">
+
+                <label data-i18n="performanceRating">
+                    تقييم الأداء
+                </label>
+
+                <div class="stars">
+
+                    <i class="fa-regular fa-star star"
+                        data-value="1"></i>
+
+                    <i class="fa-regular fa-star star"
+                        data-value="2"></i>
+
+                    <i class="fa-regular fa-star star"
+                        data-value="3"></i>
+
+                    <i class="fa-regular fa-star star"
+                        data-value="4"></i>
+
+                    <i class="fa-regular fa-star star"
+                        data-value="5"></i>
+
+                </div>
+
+            </div>
+
+            <!-- الملاحظات -->
+            <div class="feedback-section">
+
+                <label data-i18n="supervisorNotes">
+                    ملاحظات المشرف
+                </label>
+
+                <textarea id="feedbackInput"
+                    data-i18n-placeholder="writeFeedback"
+                    placeholder="اكتب ملاحظاتك هنا..."></textarea>
+
+            </div>
+
+            <!-- زر الحفظ -->
+            <button class="save-btn">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                <span data-i18n="saveEvaluation">
+                    حفظ التقييم
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ترجمة -->
+    <script src="js/translation.js"></script>
+
+    <!-- JS -->
+    <script src="js/evalu-report.js"></script>
+
+</body>
+
+</html>
