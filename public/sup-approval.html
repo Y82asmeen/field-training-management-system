@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>نموذج موافقة المشرف</title>
+
+    <link rel="stylesheet" href="css/sup-approval.css">
+</head>
+
+<body>
+
+    <div class="tabs-container">
+
+        <h1 class="page-title"> طلب موافقة المشرف على التدريب</h1>
+
+        <!-- ====== TABS ====== -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="info">المعلومات</button>
+            <button class="tab-btn" data-tab="description">الوصف</button>
+            <button class="tab-btn" data-tab="details">التفاصيل</button>
+        </div>
+
+        <div class="tab-content">
+
+            <!-- ================= INFO ================= -->
+            <div class="tab-pane active" id="info">
+                <div class="form-card">
+
+                    <h2 class="section-title">بيانات الطالب والجهة</h2>
+
+                    <div class="info-grid">
+                        <div class="form-group">
+                            <label>اسم الطالب والرقم الجامعي</label>
+                            <input type="text" id="studentName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الفصل الدراسي المسجل</label>
+                            <input type="text" id="semester" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>عدد الساعات المتبقية للتخرج</label>
+                            <input type="number" id="remainingHours" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>الفصل المتوقع التخرج فيه</label>
+                            <input type="text" id="expectedGraduation" required>
+                        </div>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <h3>بيانات الجهة</h3>
+
+                    <div class="info-grid">
+                        <div class="form-group">
+                            <label>اسم الجهة المقترحة للتدريب</label>
+                            <input type="text" id="companyName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>العنوان</label>
+                            <input type="text" id="companyAddress" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input type="email" id="companyEmail" required>
+                        </div>
+
+
+                        <div class="form-group full-width">
+                            <label>طبيعة نشاط وخدمات الشركة وحجمها</label>
+                            <textarea id="companyDescription" rows="3"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <div class="form-group">
+                        <label>نوع التدريب</label>
+
+                        <div class="training-type">
+                            <label>
+                                <span>دوام كامل وجاهي</span>
+                                <input type="radio" id="fullTimeTraining"  name="trainingType">
+                            </label>
+
+                            <label>
+                                <span>دوام جزئي وجاهي</span>
+                                <input type="radio" id="partTimeTraining" name="trainingType">
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ✅ زر حفظ -->
+
+                <div class="action-buttons">
+
+                    <button class="save-btn" onclick="validateAndSave('info')">حفظ</button>
+
+                </div>
+
+            </div>
+
+            <!-- ================= DESCRIPTION ================= -->
+            <div class="tab-pane" id="description">
+                <div class="form-card">
+
+                    <h2 class="section-title">الوصف الدقيق لطبيعة التدريب</h2>
+
+                    <div class="form-group">
+                        <label>خيار 1: برمجة</label>
+
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox"  id="systemProgramming">
+                                <span>برمجة نظام</span>
+                            </label>
+
+                            <label>
+                                <input type="checkbox" id="dbProgramming">
+                                <span>برمجة DB</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>خيار 2: نظام محوسب</label>
+
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" id="computerizedSystem">
+                                <span>نظام محوسب</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="section-divider"></div>
+
+                    <!-- ====== 4 STAGES ====== -->
+
+                    <h3 class="stages-title">
+                        سيكون التدريب في الجهة على شكل أربعة مراحل كالتالي:
+                    </h3>
+                    <div class="report-card">
+                        <h3>المرحلة 1</h3>
+                        <input type="text" id="stage1_task1"  placeholder="اسم المرحلة">
+                        <input type="text" id="stage1_task2"  placeholder="مهمة 1">
+                        <input type="text" id="stage1_task3"  placeholder="مهمة 2">
+                        <input type="text" id="stage1_task4"  placeholder="مهمة 3">
+                        <input type="text" id="stage1_task5"  placeholder="مهمة 4">
+                    </div>
+
+                    <div class="report-card">
+                        <h3>المرحلة 2</h3>
+                        <input type="text" id="stage2_task1" placeholder="اسم المرحلة">
+                        <input type="text" id="stage2_task2" placeholder="مهمة 1">
+                        <input type="text" id="stage2_task3"   placeholder="مهمة 2">
+                        <input type="text" id="stage2_task4"  placeholder="مهمة 3">
+                        <input type="text" id="stage2_task5" placeholder="مهمة 4">
+                    </div>
+
+                    <div class="report-card">
+                        <h3>المرحلة 3</h3>
+                        <input type="text" id="stage3_task1"  placeholder="اسم المرحلة">
+                        <input type="text" id="stage3_task2"  placeholder="مهمة 1" >
+                        <input type="text" id="stage3_task3"  placeholder="مهمة 2">
+                        <input type="text" id="stage3_task4"  placeholder="مهمة 3">
+                        <input type="text" id="stage3_task5"  placeholder="مهمة 4">
+                    </div>
+
+                    <div class="report-card">
+                        <h3>المرحلة 4</h3>
+                        <input type="text" id="stage4_task1" placeholder="اسم المرحلة">
+                        <input type="text" id="stage4_task2"  placeholder="مهمة 1">
+                        <input type="text" id="stage4_task3"  placeholder="مهمة 2">
+                        <input type="text" id="stage4_task4"  placeholder="مهمة 3">
+                        <input type="text" id="stage4_task5"  placeholder="مهمة 4">
+                    </div>
+
+                </div>
+
+                <!-- ✅ زر حفظ -->
+
+                <div class="action-buttons">
+
+                    <button class="save-btn" onclick="validateAndSave('description')">حفظ</button>
+
+                </div>
+
+            </div>
+
+            <!-- ================= DETAILS ================= -->
+            <div class="tab-pane" id="details">
+
+                <div class="form-card">
+
+                    <h2 class="section-title">
+                        تفاصيل أيام التدريب (بدون استثناء)
+                    </h2>
+
+                    <p class="note-text">
+                        يتم تعبئة جميع الحقول التالية لكل يوم تدريب فعلي
+                    </p>
+
+                    <!-- ================= تقرير 1 ================= -->
+                    <div class="report-card">
+                        <h3>تقرير 1 (الأيام 1 – 10)</h3>
+
+                        <!-- 1يوم -->
+                         <div class="day-card" id="day_card_1">
+
+                            <div class="day-header">
+                                <span class="day-number">1</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" id="d1_name" name="d1_name" >
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" id="d1_date" name="d1_date" >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" id="d1_task" name="d1_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل" >
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" id="d1_time_from" name="d1_time_from" >
+                                    <span>إلى</span>
+                                    <input type="time" id="d1_time_to" name="d1_time_to">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 2يوم -->
+                         <div class="day-card" id="day_card_2">
+
+                            <div class="day-header">
+                                <span class="day-number">2</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" id="d2_name" name="d2_name" >
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" id="d2_date" name="d2_date" >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" id="d2_task" name="d2_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل" >
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" id="d2_time_from" name="d2_time_from">
+                                    <span>إلى</span>
+                                    <input type="time" id="d2_time_to" name="d2_time_to">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!--3 يوم -->
+                            <div class="day-card" id="day_card_3>
+
+                            <div class="day-header">
+                                <span class="day-number">3</span>
+
+                                <div class="day-basic">
+                                    <div>
+                                        <label>اليوم</label>
+                                        <input type="text" id="d3_name" name="d3_name" >
+                                    </div>
+
+                                    <div>
+                                        <label>التاريخ</label>
+                                        <input type="date" id="d3_date" name="d3_date" >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="day-notes">
+
+                                <input type="text" id="d3_task" name="d3_task"placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل" >
+                            </div>
+
+                            <div class="day-time">
+                                <label>وقت التدريب الساعه من</label>
+                                <div class="time-range">
+                                    <input type="time" id="d3_time_from" name="d3_time_from" >
+                                    <span>إلى</span>
+                                    <input type="time" id="d3_time_to" name="d3_time_to" >
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- 4يوم -->
+<div class="day-card" id="day_card_4">
+    <div class="day-header">
+        <span class="day-number">4</span>
+        <div class="day-basic">
+            <div>
+                <label>اليوم</label>
+                <input type="text" id="d4_name" name="d4_name" >
+            </div>
+            <div>
+                <label>التاريخ</label>
+                <input type="date" id="d4_date" name="d4_date" >
+            </div>
+        </div>
+    </div>
+    <div class="day-notes">
+        <input type="text" id="d4_task" name="d4_task"placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل" >
+    </div>
+    <div class="day-time">
+        <label>وقت التدريب الساعه من</label>
+        <div class="time-range">
+            <input type="time" id="d4_time_from" name="d4_time_from" >
+            <span>إلى</span>
+            <input type="time" id="d4_time_to" name="d4_time_to" >
+        </div>
+    </div>
+</div>
+
+<!-- يوم 5 -->
+<div class="day-card" id="day_card_5">
+    <div class="day-header">
+        <span class="day-number">5</span>
+        <div class="day-basic">
+            <div>
+                <label>اليوم</label>
+                <input type="text" id="d5_name" name="d5_name" >
+            </div>
+            <div>
+                <label>التاريخ</label>
+                <input type="date" id="d5_date" name="d5_date" >
+            </div>
+        </div>
+    </div>
+    <div class="day-notes">
+        <input type="text" id="d5_task" name="d5_task"placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+    </div>
+    <div class="day-time">
+        <label>وقت التدريب الساعه من</label>
+        <div class="time-range">
+            <input type="time" id="d5_time_from" name="d5_time_from" >
+            <span>إلى</span>
+            <input type="time" id="d5_time_to" name="d5_time_to">
+        </div>
+    </div>
+</div>
+
+<!-- يوم 6 -->
+<div class="day-card" id="day_card_6">
+    <div class="day-header">
+        <span class="day-number">6</span>
+        <div class="day-basic">
+            <div>
+                <label>اليوم</label>
+                <input type="text" id="d6_name" name="d6_name" >
+            </div>
+            <div>
+                <label>التاريخ</label>
+                <input type="date" id="d6_date" name="d6_date" >
+            </div>
+        </div>
+    </div>
+    <div class="day-notes">
+        <input type="text" id="d6_task" name="d6_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل" >
+    </div>
+    <div class="day-time">
+        <label>وقت التدريب الساعه من</label>
+        <div class="time-range">
+            <input type="time" id="d6_time_from" name="d6_time_from" >
+            <span>إلى</span>
+            <input type="time" id="d6_time_to" name="d6_time_to" >
+        </div>
+    </div>
+</div>
+
+<!-- يوم 7 -->
+<div class="day-card" id="day_card_7">
+    <div class="day-header">
+        <span class="day-number">7</span>
+        <div class="day-basic">
+            <div>
+                <label>اليوم</label>
+                <input type="text" id="d7_name" name="d7_name" >
+            </div>
+            <div>
+                <label>التاريخ</label>
+                <input type="date" id="d7_date" name="d7_date" >
+            </div>
+        </div>
+    </div>
+    <div class="day-notes">
+        <input type="text" id="d7_task" name="d7_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل" >
+    </div>
+    <div class="day-time">
+        <label>وقت التدريب الساعه من</label>
+        <div class="time-range">
+            <input type="time" id="d7_time_from" name="d7_time_from">
+            <span>إلى</span>
+            <input type="time" id="d7_time_to" name="d7_time_to" >
+        </div>
+    </div>
+</div>
+
+<!-- يوم 8 -->
+<div class="day-card" id="day_card_8">
+    <div class="day-header">
+        <span class="day-number">8</span>
+        <div class="day-basic">
+            <div>
+                <label>اليوم</label>
+                <input type="text" id="d8_name" name="d8_name">
+            </div>
+            <div>
+                <label>التاريخ</label>
+                <input type="date" id="d8_date" name="d8_date">
+            </div>
+        </div>
+    </div>
+    <div class="day-notes">
+        <input type="text" id="d8_task" name="d8_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل" >
+    </div>
+    <div class="day-time">
+        <label>وقت التدريب الساعه من</label>
+        <div class="time-range">
+            <input type="time" id="d8_time_from" name="d8_time_from" >
+            <span>إلى</span>
+            <input type="time" id="d8_time_to" name="d8_time_to">
+        </div>
+    </div>
+</div>
+
+<!-- يوم 9 -->
+<div class="day-card" id="day_card_9">
+    <div class="day-header">
+        <span class="day-number">9</span>
+        <div class="day-basic">
+            <div>
+                <label>اليوم</label>
+                <input type="text" id="d9_name" name="d9_name" >
+            </div>
+            <div>
+                <label>التاريخ</label>
+                <input type="date" id="d9_date" name="d9_date" >
+            </div>
+        </div>
+    </div>
+    <div class="day-notes">
+        <input type="text" id="d9_task" name="d9_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل" >
+    </div>
+    <div class="day-time">
+        <label>وقت التدريب الساعه من</label>
+        <div class="time-range">
+            <input type="time" id="d9_time_from" name="d9_time_from" >
+            <span>إلى</span>
+            <input type="time" id="d9_time_to" name="d9_time_to" >
+        </div>
+    </div>
+</div>
+
+<!-- يوم 10 -->
+<div class="day-card" id="day_card_10">
+    <div class="day-header">
+        <span class="day-number">10</span>
+        <div class="day-basic">
+            <div>
+                <label>اليوم</label>
+                <input type="text" id="d10_name" name="d10_name" >
+            </div>
+            <div>
+                <label>التاريخ</label>
+                <input type="date" id="d10_date" name="d10_date" >
+            </div>
+        </div>
+    </div>
+    <div class="day-notes">
+        <input type="text" id="d10_task" name="d10_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل" placeholder="وصف المهام...">
+    </div>
+    <div class="day-time">
+        <label>وقت التدريب الساعه من</label>
+        <div class="time-range">
+            <input type="time" id="d10_time_from" name="d10_time_from" >
+            <span>إلى</span>
+            <input type="time" id="d10_time_to" name="d10_time_to" >
+        </div>
+    </div>
+</div>
+                    <!-- ================= تقرير 2 ================= -->
+                    <div class="report-card">
+                        <h3>تقرير 2 (الأيام 11 – 20)</h3>
+
+     <!-- يوم 11 -->
+    <div class="day-card" id="day_card_11">
+        <div class="day-header">
+            <span class="day-number">11</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d11_name" name="d11_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d11_date" name="d11_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d11_task" name="d11_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d11_time_from" name="d11_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d11_time_to" name="d11_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 12 -->
+    <div class="day-card" id="day_card_12">
+        <div class="day-header">
+            <span class="day-number">12</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d12_name" name="d12_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d12_date" name="d12_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d12_task" name="d12_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d12_time_from" name="d12_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d12_time_to" name="d12_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 13 -->
+    <div class="day-card" id="day_card_13">
+        <div class="day-header">
+            <span class="day-number">13</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d13_name" name="d13_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d13_date" name="d13_date">
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d13_task" name="d13_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d13_time_from" name="d13_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d13_time_to" name="d13_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 14 -->
+    <div class="day-card" id="day_card_14">
+        <div class="day-header">
+            <span class="day-number">14</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d14_name" name="d14_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d14_date" name="d14_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d14_task" name="d14_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d14_time_from" name="d14_time_from">
+                <span>إلى</span>
+                <input type="time" id="d14_time_to" name="d14_time_to">
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 15 -->
+    <div class="day-card" id="day_card_15">
+        <div class="day-header">
+            <span class="day-number">15</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d15_name" name="d15_name">
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d15_date" name="d15_date">
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d15_task" name="d15_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d15_time_from" name="d15_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d15_time_to" name="d15_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 16 -->
+    <div class="day-card" id="day_card_16">
+        <div class="day-header">
+            <span class="day-number">16</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d16_name" name="d16_name">
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d16_date" name="d16_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d16_task" name="d16_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d16_time_from" name="d16_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d16_time_to" name="d16_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 17 -->
+    <div class="day-card" id="day_card_17">
+        <div class="day-header">
+            <span class="day-number">17</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d17_name" name="d17_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d17_date" name="d17_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d17_task" name="d17_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d17_time_from" name="d17_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d17_time_to" name="d17_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 18 -->
+    <div class="day-card" id="day_card_18">
+        <div class="day-header">
+            <span class="day-number">18</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d18_name" name="d18_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d18_date" name="d18_date"
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d18_task" name="d18_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d18_time_from" name="d18_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d18_time_to" name="d18_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 19 -->
+    <div class="day-card" id="day_card_19">
+        <div class="day-header">
+            <span class="day-number">19</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d19_name" name="d19_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d19_date" name="d19_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d19_task" name="d19_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d19_time_from" name="d19_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d19_time_to" name="d19_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 20 -->
+    <div class="day-card" id="day_card_20">
+        <div class="day-header">
+            <span class="day-number">20</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d20_name" name="d20_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d20_date" name="d20_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d20_task" name="d20_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d20_time_from" name="d20_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d20_time_to" name="d20_time_to" >
+            </div>
+        </div>
+    </div>
+
+</div>
+
+                    <!-- ================= تقرير 3 ================= -->
+ <div class="report-card">
+    <h3>تقرير 3 (الأيام 21 – 30)</h3>
+
+    <!-- يوم 21 -->
+    <div class="day-card" id="day_card_21">
+        <div class="day-header">
+            <span class="day-number">21</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d21_name" name="d21_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d21_date" name="d21_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d21_task" name="d21_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d21_time_from" name="d21_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d21_time_to" name="d21_time_to">
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 22 -->
+    <div class="day-card" id="day_card_22">
+        <div class="day-header">
+            <span class="day-number">22</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d22_name" name="d22_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d22_date" name="d22_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d22_task" name="d22_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d22_time_from" name="d22_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d22_time_to" name="d22_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 23 -->
+    <div class="day-card" id="day_card_23">
+        <div class="day-header">
+            <span class="day-number">23</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d23_name" name="d23_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d23_date" name="d23_date">
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d23_task" name="d23_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d23_time_from" name="d23_time_from">
+                <span>إلى</span>
+                <input type="time" id="d23_time_to" name="d23_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 24 -->
+    <div class="day-card" id="day_card_24">
+        <div class="day-header">
+            <span class="day-number">24</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d24_name" name="d24_name">
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d24_date" name="d24_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d24_task" name="d24_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d24_time_from" name="d24_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d24_time_to" name="d24_time_to">
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 25 -->
+    <div class="day-card" id="day_card_25">
+        <div class="day-header">
+            <span class="day-number">25</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d25_name" name="d25_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d25_date" name="d25_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d25_task" name="d25_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d25_time_from" name="d25_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d25_time_to" name="d25_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 26 -->
+    <div class="day-card" id="day_card_26">
+        <div class="day-header">
+            <span class="day-number">26</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d26_name" name="d26_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d26_date" name="d26_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d26_task" name="d26_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d26_time_from" name="d26_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d26_time_to" name="d26_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 27 -->
+    <div class="day-card" id="day_card_27">
+        <div class="day-header">
+            <span class="day-number">27</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d27_name" name="d27_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d27_date" name="d27_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d27_task" name="d27_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d27_time_from" name="d27_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d27_time_to" name="d27_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 28 -->
+    <div class="day-card" id="day_card_28">
+        <div class="day-header">
+            <span class="day-number">28</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d28_name" name="d28_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d28_date" name="d28_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d28_task" name="d28_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d28_time_from" name="d28_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d28_time_to" name="d28_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 29 -->
+    <div class="day-card" id="day_card_29">
+        <div class="day-header">
+            <span class="day-number">29</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d29_name" name="d29_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d29_date" name="d29_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d29_task" name="d29_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d29_time_from" name="d29_time_from">
+                <span>إلى</span>
+                <input type="time" id="d29_time_to" name="d29_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 30 -->
+    <div class="day-card" id="day_card_30">
+        <div class="day-header">
+            <span class="day-number">30</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d30_name" name="d30_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d30_date" name="d30_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d30_task" name="d30_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d30_time_from" name="d30_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d30_time_to" name="d30_time_to" >
+            </div>
+        </div>
+    </div>
+
+</div>
+
+                    <!-- ================= تقرير 4 ================= -->
+                  <div class="report-card">
+    <h3>تقرير 4 (الأيام 31 – 40)</h3>
+
+    <!-- يوم 31 -->
+    <div class="day-card" id="day_card_31">
+        <div class="day-header">
+            <span class="day-number">31</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d31_name" name="d31_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d31_date" name="d31_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d31_task" name="d31_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d31_time_from" name="d31_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d31_time_to" name="d31_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 32 -->
+    <div class="day-card" id="day_card_32">
+        <div class="day-header">
+            <span class="day-number">32</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d32_name" name="d32_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d32_date" name="d32_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d32_task" name="d32_task" placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d32_time_from" name="d32_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d32_time_to" name="d32_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 33 -->
+    <div class="day-card" id="day_card_33">
+        <div class="day-header">
+            <span class="day-number">33</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d33_name" name="d33_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d33_date" name="d33_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d33_task" name="d33_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d33_time_from" name="d33_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d33_time_to" name="d33_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 34 -->
+    <div class="day-card" id="day_card_34">
+        <div class="day-header">
+            <span class="day-number">34</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d34_name" name="d34_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d34_date" name="d34_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d34_task" name="d34_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d34_time_from" name="d34_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d34_time_to" name="d34_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 35 -->
+    <div class="day-card" id="day_card_35">
+        <div class="day-header">
+            <span class="day-number">35</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d35_name" name="d35_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d35_date" name="d35_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d35_task" name="d35_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d35_time_from" name="d35_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d35_time_to" name="d35_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 36 -->
+    <div class="day-card" id="day_card_36">
+        <div class="day-header">
+            <span class="day-number">36</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d36_name" name="d36_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d36_date" name="d36_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d36_task" name="d36_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d36_time_from" name="d36_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d36_time_to" name="d36_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 37 -->
+    <div class="day-card" id="day_card_37">
+        <div class="day-header">
+            <span class="day-number">37</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d37_name" name="d37_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d37_date" name="d37_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d37_task" name="d37_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d37_time_from" name="d37_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d37_time_to" name="d37_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 38 -->
+    <div class="day-card" id="day_card_38">
+        <div class="day-header">
+            <span class="day-number">38</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d38_name" name="d38_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d38_date" name="d38_date">
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d38_task" name="d38_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d38_time_from" name="d38_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d38_time_to" name="d38_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 39 -->
+    <div class="day-card" id="day_card_39">
+        <div class="day-header">
+            <span class="day-number">39</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d39_name" name="d39_name">
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d39_date" name="d39_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d39_task" name="d39_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d39_time_from" name="d39_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d39_time_to" name="d39_time_to" >
+            </div>
+        </div>
+    </div>
+
+    <!-- يوم 40 -->
+    <div class="day-card" id="day_card_40">
+        <div class="day-header">
+            <span class="day-number">40</span>
+            <div class="day-basic">
+                <div>
+                    <label>اليوم</label>
+                    <input type="text" id="d40_name" name="d40_name" >
+                </div>
+                <div>
+                    <label>التاريخ</label>
+                    <input type="date" id="d40_date" name="d40_date" >
+                </div>
+            </div>
+        </div>
+        <div class="day-notes">
+            <input type="text" id="d40_task" name="d40_task"  placeholder="ملاحظات تتعلق بحالة جدول الطالب الدراسي لهذا اليوم مفرغ / يوم سبت /مدمج/دوام اونلان/عطلة ما قبل الفصل/عطلة ما بعد الفصل">
+        </div>
+        <div class="day-time">
+            <label>وقت التدريب الساعه من</label>
+            <div class="time-range">
+                <input type="time" id="d40_time_from" name="d40_time_from" >
+                <span>إلى</span>
+                <input type="time" id="d40_time_to" name="d40_time_to" >
+
+
+        </div>
+    </div>
+</div>
+                <div class="action-buttons">
+                    <button class="save-btn" onclick="validateAndSave('details')">حفظ</button>
+                    <button class="submit-btn" onclick="submitReport()">
+                         إرسال الطلب
+                    </button>
+                </div>
+
+    <script src="js/sup-approval.js"></script>
+</body>
+
+</html>

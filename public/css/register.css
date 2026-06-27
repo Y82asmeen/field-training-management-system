@@ -1,0 +1,224 @@
+/* ===================================== */
+/*        تصميم صفحة إنشاء الحساب      */
+/* ===================================== */
+
+.register-page {
+  margin: 0;
+  height: 850px;
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(135deg, #13385a, #296097, #0f2a44);
+  min-height: 100vh;
+
+  padding-top: 90px;
+  padding: 1px 0;
+  /* مسافة صغيرة فوق وتحت */
+  box-sizing: border-box;
+}
+
+/* البوكس الأبيض */
+
+.register-container {
+  background: white;
+  padding: 25px 30px;
+  width: 420px;
+  max-width: 92%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 100px auto 0 auto;  /* مسافة صغيرة فوق وتحت */
+}
+
+.register-logo {
+  width: 100px;
+  margin-bottom: 0px;
+}
+
+.register-container h2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.user-type {
+  display: flex;
+  justify-content: center;   /* بدل space-between */
+  gap: 10px;
+  flex-wrap: wrap;           /* 👈 مهم جدًا */
+}
+
+/*margin: 15px 0 20px 0;*/
+/* البطاقات */
+
+.card {
+  width: 110px;
+  height: 85px;
+  padding: 8px;
+
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+  /* تقليل المسافة بين الأيقونة والنص */
+
+  transition: 0.3s;
+}
+
+.card .icon {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* hover فقط للبطاقات غير المحددة */
+.register-page .card.student:hover:not(.active) {
+  background: #0f2a44;
+  color: white;
+}
+
+.register-page .card.supervisor:hover:not(.active) {
+  background: #2e7d32;
+  color: white;
+}
+
+.register-page .card.company:hover:not(.active) {
+  background: #ef6c00;
+  color: white;
+}
+
+/* البطاقة المحددة */
+
+.card.active {
+  color: white;
+}
+
+.card.student.active {
+  background: #0f2a44;
+  border-color: #0f2a44;
+}
+
+.card.supervisor.active {
+  background: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.card.company.active {
+  background: #ef6c00;
+  border-color: #ef6c00;
+}
+
+.error-message {
+  color: #c92513;
+  font-size: 13px;
+  margin: 8px 0;
+  display: none;
+  text-align: center;
+}
+
+#userTypeError {
+  margin-bottom: 10px;
+}
+
+#userTypeError {
+  color: #c92513 !important;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 8px 0;
+  text-align: center;
+}
+
+/* الحقول */
+
+label {
+  display: block;
+  text-align: right;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 9px 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1d4c7a;
+}
+
+/* الزر */
+
+.register-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 16px;
+  background: #1d4c7a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #163b5f;
+}
+
+/* اتجاه الليبل حسب اللغة */
+
+body[dir="rtl"] label {
+  text-align: right;
+}
+
+body[dir="ltr"] label {
+  text-align: left;
+}
+
+body[dir="rtl"] input {
+  text-align: right;
+}
+
+body[dir="ltr"] input {
+  text-align: left;
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 16px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="dashboardTitle">الصفحة الرئيسية | التدريب الميداني</title>
+
+    <link rel="stylesheet" href="css/supervisor-dashboard.css">
+    <link rel="stylesheet" href="css/welcome.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="supervisor-page">
+
+    <!-- 🔝 Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- اليمين -->
+            <div class="nav-logo">
+                <img src="logoo2.png" alt="Logo" class="nav-logo-img">
+                <span id="supervisorName">د. عبدالله</span>
+            </div>
+
+            <!-- اليسار -->
+            <div class="nav-right">
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="#" id="logoutBtn" data-i18n="logout">
+                            تسجيل الخروج
+                        </a>
+                    </li>
+                </ul>
+
+                <button id="langToggle" class="lang-btn">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- 📊 المحتوى -->
+    <div class="dashboard">
+
+        <!-- 🔢 Cards -->
+        <div class="cards">
+
+            <!-- طلبات الموافقة -->
+            <div class="card clickable" onclick="window.location.href='supervisor-requests.html'">
+                <div class="icon blue">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                </div>
+
+                <h2 id="pendingRequests">3</h2>
+
+                <p data-i18n="trainingRequestsApproval">
+                    طلبات للموافقة
+                </p>
+            </div>
+
+            <!-- تقارير بانتظار -->
+            <div class="card">
+                <div class="icon orange">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <h2 id="pendingReports">6</h2>
+
+                <p data-i18n="reportsWaiting">
+                    تقارير بانتظار المراجعة
+                </p>
+            </div>
+
+            <!-- مراجعة -->
+            <div class="card">
+                <div class="icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <h2 id="reviewedReports">15</h2>
+
+                <p data-i18n="reviewedReports">
+                    تقارير تمت مراجعتها
+                </p>
+            </div>
+
+            <!-- الطلاب -->
+            <div class="card">
+                <div class="icon yellow">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <h2 id="studentsCount">12</h2>
+
+                <p data-i18n="totalStudents">
+                    إجمالي الطلاب
+                </p>
+            </div>
+
+        </div>
+
+        <!-- 👨‍🎓 طلابي -->
+        <div class="section">
+
+            <div class="section-header">
+                <h3 data-i18n="myStudents">
+                    طلابي
+                </h3>
+
+                <a href="supervisor-students.html" data-i18n="viewAll">
+                    عرض الكل
+                </a>
+            </div>
+
+            <div id="studentsContainer"></div>
+
+        </div>
+
+    </div>
+
+    <script src="js/translation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/supervisor-dashboard.js"></script>
+
+</body>
+
+</html>

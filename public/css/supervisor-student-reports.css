@@ -1,0 +1,284 @@
+body {
+
+    margin: 0;
+
+    font-family: 'Cairo', sans-serif;
+
+    background: #eef3f1;
+}
+
+/* الصفحة */
+
+.reports-page {
+    padding: 35px;
+}
+
+/* العنوان */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+
+    margin: 0 0 5px;
+
+    color: #163d1d;
+
+    font-size: 36px;
+}
+
+.page-header p {
+
+    margin: 0;
+
+    color: #6c757d;
+
+    font-size: 15px;
+}
+
+/* بطاقة التقرير */
+
+.report-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+
+    transition: 0.3s;
+}
+
+.report-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+    0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* معلومات التقرير */
+
+.report-info h3 {
+
+    margin: 0 0 6px;
+
+    color: #163d1d;
+
+    font-size: 22px;
+}
+
+.report-info p {
+
+    margin: 0;
+
+    color: #7b8794;
+
+    font-size: 14px;
+}
+
+/* الأزرار */
+
+.actions {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* عرض */
+
+.view-btn {
+
+    border: none;
+
+    background: #c2d9ff;
+    color: #0e429e;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #aec2de;
+}
+
+/* قبول */
+
+.accept-btn {
+
+    border: none;
+
+    background: #bdffc9;
+    color: #165c1a;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.accept-btn:hover {
+    background: #9dcea7;
+}
+
+/* رفض */
+
+.reject-btn {
+
+    border: none;
+
+    background: #fecccc;
+    color: #af1313;
+    
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.reject-btn:hover {
+    background: #e2a3a3;
+}
+
+
+/* ============================== */
+/*   صفحة التقارير ل الدكتور    */
+/* ============================== */
+
+
+/* خلفية الصفحة */
+.supervisor-view-report {
+    background-color: #068416;
+}
+
+
+/* الكارد الرئيسية */
+.supervisor-view-report .form-card {
+    background-color: #d8ffd3;
+    border: 1px solid #d6e4ff; 
+}
+
+
+/* كروت التقارير */
+.supervisor-view-report .report-card {
+    background-color: #f7f7f7;
+}
+
+
+/* كروت الأيام */
+.supervisor-view-report .day-card {
+    background-color: #ffffff;
+    border: 1px solid #e0ecff;
+}
+
+
+/* العناوين */
+.supervisor-view-report .section-title {
+    color: #f0ffee;
+}
+
+
+/* التابات */
+.supervisor-view-report .tab-btn.active {
+    background-color: #1d510f;
+    color: white;
+}
+
+
+/* الحقول */
+.supervisor-view-report input,
+.supervisor-view-report textarea {
+    background: #f5f5f5;
+    border: 1px solid #d5d5d5;
+}
+
+
+/* readonly */
+.supervisor-view-report input[readonly],
+.supervisor-view-report textarea[readonly] {
+    pointer-events: none;
+    color: #333;
+}
+
+
+/* radio buttons */
+.supervisor-view-report .training-type input[type="radio"] {
+    display: none;
+}
+
+
+.supervisor-view-report .training-type label::after {
+
+    content: "";
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    border: 2px solid #585858;
+
+    display: inline-block;
+
+    transition: 0.3s;
+}
+
+
+/* لما ينضغط */
+.supervisor-view-report 
+.training-type input[type="radio"]:checked + span::before {
+
+    border-color: #313930;
+}
+
+.supervisor-view-report .report-header{
+
+    background-color: rgb(192, 254, 192);
+}
+
+.supervisor-view-report .guide-box {
+    background: rgb(178, 253, 178);
+}
+
+.supervisor-view-report #info .info-form {
+    background: rgb(178, 253, 178);
+}
+
+.supervisor-view-report #summary .summary-container{
+    background: rgb(178, 253, 178);
+}
+
+.supervisor-view-report #tasks .tasks-container{
+    background: rgb(178, 253, 178);
+}

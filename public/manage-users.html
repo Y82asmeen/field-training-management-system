@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المستخدمين</title>
+
+    <link rel="stylesheet" href="css/manage-users.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="users-container">
+
+        <div class="page-header">
+            <h1  data-i18n="manage_users">إدارة المستخدمين</h1>
+
+           <button class="add-btn" onclick="goToCreateUser()">
+    <i class="fa-solid fa-plus"></i>
+    <span data-i18n="add_user">إضافة مستخدم</span>
+</button>
+        </div>
+
+        <div class="top-bar">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+               <input type="text"
+       id="searchInput"
+       data-i18n-placeholder="search_user"
+       placeholder="ابحث عن مستخدم">
+            </div>
+
+        </div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th data-i18n="name">الاسم</th>
+                        <th data-i18n="email">الإيميل</th>
+                        <th data-i18n="role">الدور</th>
+                        <th data-i18n="actions">الإجراءات</th>
+                    </tr>
+                </thead>
+
+                <tbody id="usersTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="js/translation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/manage-users.js"></script>
+
+</body>
+
+</html>

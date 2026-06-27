@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعدادات النظام المتقدمة</title>
+
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/edit-user.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="edit-page-body">
+
+<div id="navbar"></div>
+
+<div class="edit-container">
+
+    <div class="edit-card full-width">
+
+        <div class="edit-header">
+            <div class="header-icon"><i class="fa-solid fa-gears"></i></div>
+            <h2>لوحة التحكم بالنظام</h2>
+            <p>إدارة شاملة للنظام</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="settings-wrapper">
+
+            <div class="settings-tabs">
+                <button class="tab-link active" onclick="openSection(event, 'general')">
+                    <i class="fa-solid fa-sliders"></i> عام
+                </button>
+
+                <button class="tab-link" onclick="openSection(event, 'timeline')">
+                    <i class="fa-solid fa-calendar-days"></i> الجدول
+                </button>
+
+                <button class="tab-link" onclick="openSection(event, 'logs')">
+                    <i class="fa-solid fa-clock-rotate-left"></i> السجل
+                </button>
+
+                <button class="tab-link danger" onclick="openSection(event, 'maintenance')">
+                    <i class="fa-solid fa-triangle-exclamation"></i> الصيانة
+                </button>
+            </div>
+
+            <!-- Content -->
+            <main class="settings-main-content">
+
+                <!-- General -->
+                <section id="general" class="tab-section">
+                    <h3 class="section-title">الإعدادات العامة</h3>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>اسم المنصة</label>
+                            <input type="text" id="site_name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>إيميل الدعم</label>
+                            <input type="email" id="system_email">
+                        </div>
+
+                        <div class="form-group">
+                            <label>حالة التسجيل</label>
+                            <select id="registration_status">
+                                <option value="open">مفتوح</option>
+                                <option value="closed">مغلق</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>تاريخ التقرير</label>
+                            <input type="date" id="report_deadline">
+                        </div>
+                    </div>
+
+                    <button class="btn-save-all" onclick="saveGlobalSettings()">
+                        <i class="fa-solid fa-floppy-disk"></i> حفظ
+                    </button>
+                </section>
+
+                <!-- Timeline -->
+                <section id="timeline" class="tab-section" style="display:none;">
+                    <h3 class="section-title">الجدول الزمني</h3>
+
+                    <table class="settings-table">
+                        <thead>
+                        <tr>
+                            <th>المرحلة</th>
+                            <th>البداية</th>
+                            <th>النهاية</th>
+                        </tr>
+                        </thead>
+                        <tbody id="timeline-body"></tbody>
+                    </table>
+                </section>
+
+                <!-- Logs -->
+                <section id="logs" class="tab-section" style="display:none;">
+                    <h3 class="section-title">السجل</h3>
+                    <div class="logs-container" id="logs-list"></div>
+                </section>
+
+                <!-- Maintenance -->
+                <section id="maintenance" class="tab-section" style="display:none;">
+                    <h3 class="section-title">الصيانة</h3>
+
+                    <div class="danger-zone-box">
+
+                        <div class="danger-item">
+                            <div>
+                                <h4>مسح الكاش</h4>
+                                <p>تحديث البيانات المخزنة</p>
+                            </div>
+                            <button class="btn-outline" onclick="clearCache()">مسح</button>
+                        </div>
+
+                        <div class="danger-item">
+                            <div>
+                                <h4>Backup</h4>
+                                <p>تحميل نسخة احتياطية</p>
+                            </div>
+                            <button class="btn-save" onclick="createBackup()">تحميل</button>
+                        </div>
+
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+    </div>
+</div>
+
+  <script src="js/translation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+<script src="js/settings.js"></script>
+
+</body>
+</html>

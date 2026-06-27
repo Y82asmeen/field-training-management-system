@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>تقرير التدريب</title>
+
+    <link rel="stylesheet" href="css/st-da.css">
+    <link rel="stylesheet" href="css/report-form.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <h2 class="section-title">تقرير الأسبوع 1</h2>
+
+    <div class="report-header">
+
+        <p>
+            التقرير الدوري رقم
+            <span id="reportNumber">(1)</span>
+            لمادة التدريب الميداني
+        </p>
+
+        <p>
+            للفترة من يوم
+            <input type="date" id="startDate" required>
+            إلى يوم
+            <input type="date" id="endDate" required>
+        </p>
+
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+
+        <button class="tab-btn active" data-tab="guide">تعليمات</button>
+        <button class="tab-btn" data-tab="info">المعلومات</button>
+        <button class="tab-btn" data-tab="summary">الملخص</button>
+        <button class="tab-btn" data-tab="tasks">المهام</button>
+        
+
+    </div>
+
+    <!-- GUIDE -->
+    <div class="tab-pane active" id="guide">
+        <div class="guide-box">
+            <h2>تعليمات التقرير</h2>
+            <p class="note">ملاحظة: يتم تعبئة التقرير من قبل الطالب نفسه ويكون مسؤولاً عن صحة المعلومات المكتوبة.</p>
+            <p class="important">**المطلوب تعبئة جميع الحقول لجميع الأجزاء الأربعة**</p>
+
+            <h3>المحتويات:</h3>
+            <ul>
+                <li>الجزء الأول: معلومات الطالب ومشرف جهة التدريب</li>
+                <li>الجزء الثاني: لمحة موجزة عن محتوى التدريب</li>
+                <li>الجزء الثالث: تفاصيل المهمات</li>
+                <li>الجزء الرابع: إرفاق نموذج الموافقة</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="tab-pane" id="info">
+
+        <section class="info-section">
+
+
+            <form class="info-form">
+
+                <div class="info-grid">
+
+                    <!-- اسم الطالب -->
+                    <div class="form-group">
+                        <label>اسم الطالب</label>
+                        <input type="text" name="student_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>الرقم الجامعي</label>
+                        <input type="text" name="studentId" required>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>اسم جهة التدريب</label>
+                        <input type="text" name="company_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>اسم المشرف</label>
+                        <input type="text" name="supervisor_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <input type="text" name="phone" required>
+                    </div>
+
+
+                </div>
+
+                <!-- نوع التدريب -->
+                <div class="form-group full-width">
+                    <label>نوع التدريب</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="trainingType" value="programming_system" required> برمجة نظام</label>
+                        <label><input type="checkbox" name="trainingType" value="database_programming" required> برمجة DB</label>
+                        <label><input type="checkbox" name="trainingType" value="computer_system" required> نظام محوسب</label>
+                    </div>
+                </div>
+
+                <!-- التاريخ -->
+                <div class="form-group full-width date-group">
+                    <label>تاريخ محتوى هذا التقرير</label>
+                    من <input type="date" name="start_date" required>
+                    إلى <input type="date" name="end_date" required>
+                </div>
+
+                <!-- الأيام والساعات -->
+                <div class="form-group full-width">
+                    <label>عدد أيام هذا التقرير ومجموع الساعات</label>
+                    <input type="number" name="days" placeholder="عدد الأيام" required>
+                    <input type="number" name="hours" placeholder="عدد الساعات" required>
+                </div>
+
+                <!-- الوصف -->
+                <div class="form-group full-width">
+                    <label>فقرة يوضح فيها الطالب ما يفعله خلال فترة التدريب</label>
+                    <textarea rows="5" name="summary_text" required></textarea>
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="tab-pane" id="summary">
+
+        <div class="summary-container">
+
+            <!-- 🟦 التعليمات -->
+            <div class="guide-box small">
+                <h4>تعليمات الجزء الثاني</h4>
+                <ul>
+                    <li>وصف المهمة حسب ما تم عمله اثناء تواجدك بالجهة المعنية اثناء ايام التدريب.</li>
+                    <li>قم بكتابة أهم المهام التي عملت عليها خلال فترة التقرير.</li>
+                    <li>يمكن أن تكون المهام (برمجة / صيانة / شاشات نظام).</li>
+                    <li>يجب أن تكون الكتابة مختصرة وواضحة.</li>
+                </ul>
+            </div>
+            <!-- ✅ الخط الفاصل -->
+            <div class="section-divider">
+
+            </div>
+            <!-- 🟨 نوع العمل -->
+            <div class="form-group">
+                <label>نوع العمل خلال هذه الفترة</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="radio" name="workType" value="programming" required> برمجة</label>
+                    <label>
+                        <input type="radio" name="workType" value="maintenance" required> صيانة</label>
+                    <label>
+                        <input type="radio" name="workType" value="system" required> نظام</label>
+                </div>
+            </div> <!-- 🟩 جدول المهام -->
+            <div class="summary-table">
+                <div class="table-header"> <span>#</span> <span>المهمة / الشاشة / الوظيفة</span> </div>
+                <div class="table-row"><span>1</span><input type="text" name="task_1" required></div>
+                <div class="table-row"><span>2</span><input type="text" name="task_2" required></div>
+                <div class="table-row"><span>3</span><input type="text" name="task_3" required></div>
+                <div class="table-row"><span>4</span><input type="text" name="task_4"></div>
+                <div class="table-row"><span>5</span><input type="text" name="task_5"></div>
+            </div>
+            <!-- 🟥 وصف -->
+            <div class="form-group">
+                <label>وصف موجز عن العمل خلال هذه الفترة</label>
+                <textarea rows="4" name="work_summary" required></textarea>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= TASKS ================= -->
+    <div class="tab-pane" id="tasks">
+
+        <div class="tasks-container">
+
+            <!-- 🟦 التعليمات -->
+            <div class="guide-box small">
+                <h4>تعليمات الجزء الثالث</h4>
+                <ul>
+                    <li>قم بتعبئة جميع المهام الأربعة.</li>
+                    <li>اكتب وصف واضح لكل مهمة.</li>
+                    <li>أرفق صور للكود والمخرجات لكل مهمة.</li>
+                </ul>
+            </div>
+            <div class="section-divider"></div>
+
+            <!-- 🟥 البوكس الرئيسي -->
+            <div class="tasks-box">
+
+                <!-- ========= المهمة 1 ========= -->
+                <div class="task-block">
+                    <h3>المهمة الأولى</h3>
+
+                    <label>اسم المهمة الأولى:</label>
+                    <input type="text" name="task1_name" required>
+
+                    <label>وصف الوظيفة (نوع الخدمة) التي تؤديها المهمة / أو الشاشة:</label>
+                    <textarea name="task1_description" required></textarea>
+
+                    <label>نوع العملاء المستفيدين من المهمة / أو الشاشة:</label>
+                    <input type="text" name="task1_clients" required>
+
+                    <label>البرمجيات / المعدات المستخدمة:</label>
+                    <input type="text" name="task1_tools" required>
+
+                    <label>المعلومات التى يتم ادخالها و معالجتها من خلال هذه المهمة /او الشاشة:</label>
+                    <textarea name="task1_data" required></textarea>
+
+                    <label>عدة صوراو لقطات screen shoots للكود المستخدم لاداء المهمة :</label>
+                    <input type="file" name="task1_code_images" required>
+
+                    <label>عدة صوراو لقطات screen shoots لمخرجات المهمة /او شاشة النظام التي تم التعامل معها:</label>
+                    <input type="file"  name="task1_output_images" required>
+                </div>
+
+                <!-- ========= المهمة 2 ========= -->
+                <div class="task-block">
+                    <h3>المهمة الثانية</h3>
+
+                    <label>اسم المهمة الثانية:</label>
+                    <input type="text"name="task2_name" required>
+
+                    <label>وصف الوظيفة (نوع الخدمة) التي تؤديها المهمة / أو الشاشة:</label>
+                    <textarea name="task2_description" required></textarea>
+
+                    <label>نوع العملاء المستفيدين من المهمة / أو الشاشة:</label>
+                    <input type="text" name="task2_clients" required>
+
+                    <label>البرمجيات / المعدات المستخدمة:</label>
+                    <input type="text" name="task2_tools" required>
+
+                    <label>المعلومات التى يتم ادخالها و معالجتها من خلال هذه المهمة /او الشاشة:</label>
+                    <textarea name="task2_data" required></textarea>
+
+                    <label>عدة صوراو لقطات screen shoots للكود المستخدم لاداء المهمة :</label>
+                    <input type="file" name="task2_code_images" required>
+
+                    <label>عدة صوراو لقطات screen shoots لمخرجات المهمة /او شاشة النظام التي تم التعامل معها:</label>
+                    <input type="file" name="task2_output_images" required>
+                </div>
+
+                <!-- ========= المهمة 3 ========= -->
+                <div class="task-block">
+                    <h3>المهمة الثالثة</h3>
+
+                    <label>اسم المهمة الثالثة:</label>
+                    <input type="text"name="task3_name" required>
+
+                    <label>وصف الوظيفة (نوع الخدمة) التي تؤديها المهمة / أو الشاشة:</label>
+                    <textarea name="task3_description" required></textarea>
+
+                    <label>نوع العملاء المستفيدين من المهمة / أو الشاشة:</label>
+                    <input type="text" name="task3_clients" required>
+
+                    <label>البرمجيات / المعدات المستخدمة:</label>
+                    <input type="text" name="task3_tools" required>
+
+                    <label>المعلومات التى يتم ادخالها و معالجتها من خلال هذه المهمة /او الشاشة:</label>
+                    <textarea name="task3_data" required></textarea>
+
+                    <label>عدة صوراو لقطات screen shoots للكود المستخدم لاداء المهمة :</label>
+                    <input type="file" name="task3_code_images" required>
+
+                    <label>عدة صوراو لقطات screen shoots لمخرجات المهمة /او شاشة النظام التي تم التعامل معها:</label>
+                    <input type="file"  name="task3_output_images" required>
+                </div>
+
+                <!-- ========= المهمة 4 ========= -->
+                <div class="task-block">
+                    <h3>المهمة الرابعة</h3>
+
+                    <label>اسم المهمة الرابعة:</label>
+                    <input type="text"name="task4_name" required>
+
+                    <label>وصف الوظيفة (نوع الخدمة) التي تؤديها المهمة / أو الشاشة:</label>
+                    <textarea name="task4_description" required></textarea>
+
+                    <label>نوع العملاء المستفيدين من المهمة / أو الشاشة:</label>
+                    <input type="text" name="task4_clients" required>
+
+                    <label>البرمجيات / المعدات المستخدمة:</label>
+                    <input type="text" name="task4_tools" required>
+
+                    <label>المعلومات التى يتم ادخالها و معالجتها من خلال هذه المهمة /او الشاشة:</label>
+                    <textarea name="task4_data" required></textarea>
+
+                    <label>عدة صوراو لقطات screen shoots للكود المستخدم لاداء المهمة :</label>
+                    <input type="file" name="task4_code_images" required>
+
+                    <label>عدة صوراو لقطات screen shoots لمخرجات المهمة /او شاشة النظام التي تم التعامل معها:</label>
+                    <input type="file"  name="task4_output_images"required>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= ATTACHMENTS ================= -->
+    <div class="tab-pane" id="attachments">
+
+        <div class="form-group">
+            <label>رفع ملف</label>
+            <input type="file">
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- 🔘 أزرار -->
+    <div class="form-actions" id="formActions">
+        <button class="save-btn" id="saveBtn">حفظ</button>
+        <button type="button" class="submit-btn" id="submitBtn">إرسال التقرير</button>
+    </div>
+
+    <script src="js/report-form.js"></script>
+
+</body>
+
+</html>

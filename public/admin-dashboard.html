@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="admin_dashboard">لوحة تحكم المدير</title>
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="page-body">
+
+    <div id="navbar"></div>
+
+    <div class="admin-container">
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-info">
+                    <h1 data-i18n="admin_dashboard">لوحة تحكم مدير النظام</h1>
+                    <p data-i18n="admin_subtitle">إدارة وصلاحيات نظام التدريب الميداني</p>
+                </div>
+            </header>
+
+            <section class="stats-grid top-stats">
+                <div class="stat-card">
+                    <div class="stat-icon bg-light-blue"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-details">
+                        <p data-i18n="students_count">إجمالي الطلاب</p>
+                        <h3 id="studentsCount">0</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-light-yellow"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="stat-details">
+                        <p data-i18n="academic_supervisors">المشرفون الأكاديميون</p>
+                        <h3 id="supervisorsCount">0</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon bg-light-green"><i class="fa-solid fa-building"></i></div>
+                    <div class="stat-details">
+                        <p data-i18n="companies_count">جهات التدريب</p>
+                        <h3 id="companiesCount">0</h3>
+                    </div>
+                </div>
+            </section>
+
+            <h2 class="section-title" data-i18n="training_status">حالة التدريبات الحالية</h2>
+            <section class="stats-grid status-grid">
+                <div class="stat-card-status border-blue">
+                    <div class="card-inner">
+                        <p data-i18n="active_trainings">التدريبات النشطة</p>
+                        <h3 id="activeCount">32</h3>
+                        <i class="fa-solid fa-person-walking-arrow-right icon-blue"></i>
+                    </div>
+                </div>
+                <div class="stat-card-status border-green">
+                    <div class="card-inner">
+                        <p data-i18n="completed_trainings">التدريبات المكتملة</p>
+                        <h3 id="completedCount">13</h3>
+                        <i class="fa-solid fa-circle-check icon-green"></i>
+                    </div>
+                </div>
+                <div class="stat-card-status border-orange">
+                    <div class="card-inner">
+                        <p data-i18n="pending_requests">الطلبات المعلقة</p>
+                        <h3 id="pendingCount">7</h3>
+                        <i class="fa-solid fa-spinner fa-spin-pulse icon-orange"></i>
+                    </div>
+                </div>
+                </section>
+                <h2 class="section-title" data-i18n="quick_actions">الإجراءات السريعة</h2>
+                <section class="quick-actions-top">
+                    <div class="main-action-card" onclick="goToUsers()">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <h3 data-i18n="manage_users">إدارة المستخدمين</h3>
+                        <p data-i18n="manage_users_desc">عرض وتعديل بيانات المستخدمين</p>
+                    </div>
+                    <div class="main-action-card" onclick="goToCreateUser()">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <h3 data-i18n="create_user">إنشاء مستخدم جديد</h3>
+                        <p data-i18n="create_user_desc">إضافة طالب أو مشرف جديد</p>
+                    </div>
+                    <div class="main-action-card" onclick="goToSettings()">
+                        <i class="fa-solid fa-gears"></i>
+                        <h3 data-i18n="system_settings">إعدادات النظام</h3>
+                        <p data-i18n="system_settings_desc">التحكم بإعدادات المنصة</p>
+                    </div>
+                </section>
+                <h2 class="section-title">تعيين المشرف الأكاديمي</h2>
+
+<section class="assign-supervisor-section">
+
+    <div class="assign-card">
+
+        <div class="form-group">
+            <label>اختر الطالب</label>
+            <select id="studentSelect">
+                <option value="">-- اختر طالب --</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>اختر المشرف الأكاديمي</label>
+            <select id="supervisorSelect">
+                <option value="">-- اختر مشرف --</option>
+            </select>
+        </div>
+
+        <button class="assign-btn" onclick="assignSupervisor()">
+            تعيين المشرف
+        </button>
+
+    </div>
+
+</section>
+
+            <div class="full-width-activity">
+                <div class="activity-box">
+                    <h2 class="section-title"  data-i18n="recent_activity">النشاط الاخير</h2>
+                    <p class="section-subtitle"  data-i18n="latest_operations">اخر العمليات في النظام</p>
+                    <div class="activity-container"id="activityContainer">
+                        <div class="activity-item">
+                            <div class="activity-status"><span class="dot blue"></span><div class="line"></div></div>
+                            <div class="activity-info">
+                                <p data-i18n="activity_register">تم تسجيل <strong>أحمد خالد</strong> في شركة الحلول الذكية</p>
+                                <span class="time">منذ ساعتين</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-status"><span class="dot green"></span></div>
+                            <div class="activity-info">
+                                <p>تم اعتماد تقرير الطالبة <strong>سارة علي</strong></p>
+                                <span class="time">منذ 3 ساعات</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </main>
+    </div>
+<script src="js/navbar.js"></script>
+<script src="js/translation.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

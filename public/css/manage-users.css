@@ -1,0 +1,96 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+}
+
+.users-container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    color: #1e3b72;
+}
+
+.add-btn {
+    background: #1e3b72;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: Cairo;
+}
+
+.top-bar {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    background: white;
+    padding: 12px 15px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: Cairo;
+}
+
+.table-wrapper {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #1e3b72;
+    color: white;
+}
+
+th, td {
+    padding: 18px;
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.action-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.edit-btn {
+    background: #3498db;
+    color: white;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}

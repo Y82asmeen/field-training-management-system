@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="supervisor_complete_title">إكمال بيانات المشرف</title>
+
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body id="page-body" dir="rtl">
+
+    <div id="navbar"></div>
+
+    <div class="container">
+        <img src="logoo2.png" class="logo">
+        <h2 data-i18n="supervisor_complete_heading">إكمال بيانات المشرف</h2>
+
+        <form method="POST">
+
+            <div class="input-group">
+                <label data-i18n="job_number_label"> * الرقم الوظيفي </label>
+                <input type="text" name="employee_number" required>
+            </div>
+
+            <div class="input-group">
+                <label data-i18n="department_label"> * القسم الأكاديمي </label>
+                <input type="text" name="department" required>
+            </div>
+
+            <div class="input-group">
+                <label data-i18n="phone_label">رقم الهاتف</label>
+                <input type="tel" name="phone" maxlength="10">
+            </div>
+
+            <!-- زر الحفظ -->
+            <button type="submit" data-i18n="save_btn">حفظ البيانات</button>
+
+        </form>
+    </div>
+
+    <script src="js/translation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/form.js"></script>
+    
+
+</body>
+
+</html>

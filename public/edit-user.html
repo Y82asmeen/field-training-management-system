@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="edit_user_title">تعديل مستخدم</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/welcome.css"> <!-- لاستيراد المتغيرات الأساسية -->
+    <link rel="stylesheet" href="css/edit-user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="edit-page-body">
+
+    <div id="navbar"></div>
+
+    <div class="edit-container">
+        <div class="edit-card">
+            <div class="edit-header">
+                <div class="header-icon">
+                    <i class="fa-solid fa-user-pen"></i>
+                </div>
+                <h2 data-i18n="edit_user">تعديل بيانات المستخدم</h2>
+                <p data-i18n="edit_user_subtitle">تحديث المعلومات الأساسية والصلاحيات</p>
+            </div>
+
+            <div class="edit-form">
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label data-i18n="name">الاسم الكامل</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="name" data-i18n-placeholder="enter_name" placeholder="أدخل الاسم">
+                    </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label data-i18n="email">البريد الإلكتروني</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" data-i18n-placeholder="enter_email" placeholder="أدخل الإيميل">
+                    </div>
+                </div>
+
+<!-- USER TYPE Field -->
+<div class="form-group">
+    <label data-i18n="role">نوع الحساب</label>
+    <div class="input-wrapper">
+        <i class="fa-solid fa-shield-halved"></i>
+        <select id="user_type">
+            <option value="student" data-i18n="student">طالب</option>
+            <option value="supervisor" data-i18n="supervisor">مشرف أكاديمي (جامعة)</option>
+            <option value="training_companies" data-i18n="company_rep">ممثل جهة تدريب (شركة)</option> <!-- الخيار الجديد -->
+            <option value="admin" data-i18n="admin">مدير نظام</option>
+        </select>
+    </div>
+</div>
+
+                <div class="form-actions">
+                    <button class="btn-save" onclick="updateUser()">
+                        <i class="fa-solid fa-check"></i>
+                        <span data-i18n="save_changes">حفظ التعديلات</span>
+                    </button>
+                    <button class="btn-cancel" onclick="window.history.back()">
+                        <i class="fa-solid fa-xmark"></i>
+                        <span data-i18n="cancel">إلغاء</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/navbar.js"></script>
+    <script src="js/translation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/edit-user.js"></script>
+</body>
+</html>

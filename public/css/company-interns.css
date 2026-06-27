@@ -1,0 +1,223 @@
+/* ================================= */
+/* ✅ صفحة المتدربين (ما غيرنا عليها) */
+/* ================================= */
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #f5f7fb;
+    margin: 0;
+}
+
+.interns-container {
+    padding: 30px;
+}
+
+.page-title {
+    margin-bottom: 25px;
+}
+
+.interns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.intern-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.intern-card:hover {
+    transform: translateY(-5px);
+}
+
+.intern-card h3 {
+    margin: 10px 0;
+}
+
+.intern-card p {
+    color: #666;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #2a7be4;
+    border-radius: 10px;
+}
+
+.progress-text {
+    font-size: 13px;
+    color: #444;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.rate-btn {
+    font-size: 17px;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2a7be4;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.rate-btn:hover {
+    background: #1d5bbf;
+}
+
+/* ================================= */
+/* ✅ صفحة التقييم (معزولة بالكامل) */
+/* ================================= */
+
+#evaluationSection {
+    display: none;
+    background: #e18930;
+    min-height: 200vh;
+    padding-top: 8px;
+    
+    padding-bottom: 40px; /* ✅ يمنع الفراغ */
+
+}
+
+/* ✅ اسم الطالب */
+#evaluationSection #studentName {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/* ✅ الكارد */
+#evaluationSection .report-container {
+    width: 70%;
+    margin: auto;
+    background: #fff8f1;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+/* ✅ عنوان */
+#evaluationSection h3 {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+/* ✅ الهيدر */
+#evaluationSection .criteria-header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) 2fr;
+
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    direction: ltr; 
+}
+
+/* النص يمين */
+#evaluationSection .criteria-header span:last-child {
+    text-align: right;
+}
+
+/* ✅ الصف */
+#evaluationSection .criteria-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) 2fr;
+    direction: ltr; /* 🔥 هذا السر */
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #7f91aa;
+}
+
+/* ✅ النص يمين */
+#evaluationSection .criteria-text {
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* ✅ الراديو */
+#evaluationSection .criteria-row label {
+    text-align: center;
+}
+
+/* ✅ تكبير الراديو */
+#evaluationSection input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* ✅ label توصيات */
+#evaluationSection label {
+    display: block;
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* ✅ textarea */
+#evaluationSection textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    border: 1px solid #494646;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* ✅ التوقيعات */
+#evaluationSection .signatures {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+#evaluationSection .signatures input {
+    flex: 1;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid #494646;
+    padding: 10px;
+}
+
+/* ✅ الختم */
+#evaluationSection .stamp input {
+    width: 98%;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid #494646;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* ✅ زر */
+#evaluationSection .save-btn {
+    display: block;
+    margin: 25px auto;
+    padding: 12px 50px;
+    border-radius: 15px;
+    border:none;
+    background: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#evaluationSection .save-btn:hover {
+    background: #d8c3ad;
+}

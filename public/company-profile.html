@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="company_complete_title">إكمال بيانات الشركة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <!-- ربط CSS -->
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/welcome.css">
+</head>
+
+<body id="page-body" dir="rtl">
+
+    <div id="navbar"></div>
+
+    <div class="container">
+        <img src="logoo2.png" class="logo">
+        <h2 data-i18n="company_complete_heading">إكمال بيانات الشركة</h2>
+
+        <form method="POST">
+
+            <!-- مجال الشركة -->
+            <div class="input-group">
+                <label data-i18n="company_field_label"> * مجال الشركة </label>
+                <input type="text" name="industry" required>
+            </div>
+
+            <!-- العنوان -->
+            <div class="input-group">
+                <label data-i18n="address_label"> * العنوان</label>
+                <input type="text" name="address" placeholder="مثال: عمان - الجبيهة">
+            </div>
+
+            <!-- رقم التواصل -->
+            <div class="input-group">
+                <label data-i18n="contact_number_label"> * رقم التواصل </label>
+                <input type="tel" name="phone" maxlength="10">
+            </div>
+
+            <!-- زر الحفظ -->
+            <button type="submit" data-i18n="save_btn">حفظ البيانات</button>
+
+        </form>
+    </div>
+
+    <script src="js/translation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/form.js"></script>
+    
+
+</body>
+
+</html>
