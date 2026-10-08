@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="student_complete_title">إكمال بيانات الطالب</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body id="page-body" dir="rtl">
+
+    <div id="navbar"></div>
+
+    <div class="container">
+        <img src="logoo2.png" class="logo">
+        <h2 data-i18n="student_complete_heading">إكمال بيانات الطالب</h2>
+
+        <form method="POST">
+
+            <!-- الرقم الجامعي -->
+            <div class="input-group">
+                <label data-i18n="student_id_label"> * الرقم الجامعي</label>
+                <input type="text" name="student_id" required>
+            </div>
+
+            <!-- التخصص -->
+            <div class="input-group">
+                <label data-i18n="major_label"> * التخصص</label>
+                <select name="major" required>
+                    <option value="" data-i18n="select_major">اختر التخصص</option>
+
+                    <option value="CIS" data-i18n="cis">CIS</option>
+                    <option value="CS" data-i18n="cs">CS</option>
+                    <option value="MIS" data-i18n="mis">MIS</option>
+                    <option value="CY" data-i18n="CY">CY</option>
+                    <option value="AI" data-i18n="ai">AI</option>
+                </select>
+            </div>
+
+            <!-- السنة الجامعية -->
+            <div class="input-group">
+                <label data-i18n="year_label"> * السنة الجامعية</label>
+                <select name="year" required>
+                    <option value="" data-i18n="select_year">اختر السنة</option>
+                    <option data-i18n="year3">سنة ثالثة</option>
+                    <option data-i18n="year4">سنة رابعة</option>
+                </select>
+            </div>
+
+
+
+            <!-- المعدل -->
+            <div class="input-group">
+                <label data-i18n="gpa_label"> * المعدل</label>
+                <input type="number" step="0.01" name="gpa" required>
+            </div>
+
+            <!-- الساعات المقطوعة -->
+            <div class="input-group">
+                <label data-i18n="hours_label">الساعات المقطوعة</label>
+                <input type="number" name="hours">
+            </div>
+
+            <!-- رقم الهاتف -->
+            <div class="input-group">
+                <label data-i18n="phone_label">رقم الهاتف</label>
+                <input type="tel" name="phone" maxlength="10">
+            </div>
+
+            <!-- زر الحفظ -->
+            <button type="submit" data-i18n="save_btn">حفظ البيانات</button>
+
+        </form>
+    </div>
+
+    <script src="js/translation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/form.js"></script>
+    
+
+
+</body>
+
+</html>

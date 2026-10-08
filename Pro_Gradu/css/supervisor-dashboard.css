@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: #deffe4;
+}
+
+/* ================================= */
+/*              NAVBAR               */
+/* ================================= */
+
+.supervisor-page .navbar {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to left, #2e7d32, #163d1d);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.supervisor-page .nav-container {
+    width: 92%;
+    margin: auto;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.supervisor-page .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.supervisor-page .nav-logo-img {
+    margin-right: 22px;
+    height: 50px;
+}
+
+.supervisor-page .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.supervisor-page .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.supervisor-page .nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.supervisor-page .nav-links a:hover {
+    color: #d7ffd9;
+}
+
+.supervisor-page #logoutBtn{
+    font-size: 18px ;
+}
+
+/* زر اللغة */
+
+.supervisor-page .lang-btn {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: rgb(255, 255, 255);
+
+    color: #2e7d32;
+    font-size: 18px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.supervisor-page .lang-btn:hover {
+    background: rgb(255, 255, 255);
+}
+
+/* ================================= */
+/*            DASHBOARD              */
+/* ================================= */
+
+.dashboard {
+    padding: 110px 30px 30px;
+}
+
+/* البطاقات */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s;
+}
+
+.card.clickable {
+    cursor: pointer;
+}
+
+.card.clickable:hover {
+    transform: translateY(-4px);
+}
+
+/* الأيقونات */
+
+.icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon i {
+    font-size: 25px;
+}
+
+.icon.blue {
+    background: #c3deff;
+    color: #2979ff;
+}
+
+.icon.orange {
+    background: #ffe4b9;
+    color: #ef8b00;
+}
+
+.icon.green {
+    background: #c3ffcb;
+    color: #2e7d32;
+}
+
+.icon.yellow {
+    background: #ffeb9a;
+    color: #d4a000;
+}
+
+.card h2 {
+    margin: 10px 0 5px;
+    font-size: 28px;
+    color: #10243e;
+}
+
+.card p {
+    margin: 0;
+    color: #31363a;
+    font-size: 17px;
+}
+
+
+/* ================================= */
+/*              SECTION              */
+/* ================================= */
+
+.section {
+    margin-top: 30px;
+
+    background: white;
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    margin: 0;
+    font-size: 30px;
+    color: #10243e;
+}
+
+.section-header a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+/* ================================= */
+/*            STUDENT CARD           */
+/* ================================= */
+
+.student-card {
+    background: #d1ffd2;
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student-info h4 {
+    margin: 0 0 5px;
+    color: #10243e;
+}
+
+.student-info p {
+    margin: 0;
+    color: #41464a;
+    font-size: 16px;
+}
+
+/* progress */
+
+.progress-section {
+    width: 45%;
+}
+
+.progress-top {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+
+    background: #ffffff;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #108c31;
+    border-radius: 10px;
+}
+
+.student-card.clickable {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.student-card.clickable:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.08);
+}
+

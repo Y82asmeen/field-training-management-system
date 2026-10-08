@@ -1,0 +1,346 @@
+body {
+    background: #3c5fa7;
+    font-family: Arial, sans-serif;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+
+.page-title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fffcfc;
+}
+
+/*  المعلومات */
+
+
+/* قائمة */
+.instructions-list {
+    margin-top: 10px;
+    padding-right: 20px;
+    font-size: 18px;
+
+}
+
+.instructions-list li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* بوكس التعليمات */
+.instructions-box {
+    margin-top: 20px;
+    background: #ffecec;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.instructions-box p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* التعليمات  */
+
+.section-title {
+    margin-top: 3px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.section-divider {
+    height: 2px;
+    background: #9ca3af;
+    margin: 25px 0;
+}
+
+.form-card {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #c7d8f1;
+    /* ✅ نفس لون الصورة */
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #333030;
+    background: #f5f5f5;
+
+    font-size: 16px;
+    /* ✅ تكبير الخط */
+    color: #000;
+    /* ✅ أسود واضح */
+}
+
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 18px;
+    /* ✅ جديد */
+}
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    /* ✅ مسافات أوسع */
+}
+
+.date-fields {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.section-divider {
+    height: 2px;
+    background: #312e2e;
+    margin: 30px 0;
+}
+
+.save-btn {
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    /* يخليهم بالنص */
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+/* شكل كل زر */
+.tab-btn {
+    background: #fefefe;
+    /* رمادي */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+/* لما يكون نشط */
+.tab-btn.active {
+    background: #26324a;
+    color: white;
+}
+
+
+
+/* ===== جدول التقييم ===== */
+
+.evaluation-table {
+    margin-top: 20px;
+}
+
+/* الهيدر */
+.eval-header {
+    display: grid;
+    grid-template-columns: 2fr repeat(5, 1fr);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* الصف */
+.eval-row {
+    display: grid;
+    grid-template-columns: 2fr repeat(5, 1fr);
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* المعيار */
+.eval-row span {
+    text-align: right;
+    font-size: 18px;
+}
+
+/* الراديو */
+.eval-row input {
+    margin: auto;
+    transform: scale(1.2);
+    /* ✅ تكبير بسيط */
+}
+
+.eval-row {
+    display: grid;
+    grid-template-columns: 2fr repeat(5, 1fr);
+    align-items: center;
+
+    padding: 10px;
+    /* ✅ يعطي مساحة */
+
+    border-bottom: 1px solid #8b8d90;
+    /* ✅ الخط بين الصفوف */
+}
+
+.eval-row:last-child {
+    border-bottom: none;
+}
+
+/* ===== كل تقرير ===== */
+.report-block {
+    margin-bottom: 30px;
+}
+
+/* عنوان */
+.report-block h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/*  ملخص التدريب  */
+
+/* بيانات التقرير */
+.report-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.note-text {
+    font-size: 18px;
+}
+
+/* المهام */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.task-item span {
+    width: 70px;
+    font-weight: bold;
+}
+
+/* خط فاصل */
+.line {
+    height: 1px;
+    background: #6f6e6e;
+    margin: 15px 0;
+}
+
+/* المجموع */
+.total-section {
+    margin-top: 25px;
+}
+
+/* الأحمر */
+.red {
+    color: rgb(193, 18, 18);
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* المهام  */
+
+/* الكرت */
+.task-summary-card {
+    background: #e5e7eb;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* العنوان */
+.task-summary-card h3 {
+    margin-bottom: 10px;
+}
+
+/* صف التقرير */
+.report-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.report-line span {
+    width: 80px;
+    font-weight: bold;
+}
+
+/* الحقول */
+.report-line input {
+    flex: 1;
+    padding: 8px;
+    font-size: 13px;
+}
+
+/* الملاحظات */
+.notes {
+    width: 98%;
+    margin-top: 10px;
+    padding: 10px;
+    min-height: 70px;
+}
+
+.final-reflection {
+    margin-top: 30px;
+}
+
+/* يخلي التكس ايريا مرتبة */
+.final-reflection textarea {
+    width: 97%;
+    padding: 12px;
+    min-height: 120px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/*    للاخطاء    */
+
+.input-error {
+    border: 2px solid rgb(181, 0, 0) !important;
+    background: #ffe9e9;
+}
+
+.action-buttons {
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+    /* ✅ مهم جداً */
+    margin: 30px 0;
+}
+
+.save-btn,
+.submit-btn {
+    background: #ffeddd;
+    color: rgb(22, 21, 21);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 160px;
+    /* ✅ هذا المهم */
+    padding: 14px 0;
+    /* ✅ نفس الارتفاع */
+    text-align: center;
+}

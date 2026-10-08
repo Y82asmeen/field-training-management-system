@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title data-i18n="dashboardTitle">الصفحة الرئيسية | التدريب الميداني</title>
+
+  <link rel="stylesheet" href="css/student-dashboard.css">
+  <link rel="stylesheet" href="css/welcome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="student-page">
+
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <!-- 🔵 الجهة اليمين (بدل اللوجو + اسم النظام) -->
+      <div class="nav-logo">
+        <img src="logoo2.png" alt="Logo" class="nav-logo-img">
+        <span id="studentName" data-default="اسم الطالب">اسم الطالب</span>
+      </div>
+
+      <!-- 🔵 الجهة اليسار -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="student-dashboard.html" data-i18n="dashboard">الرئيسية</a></li>
+
+          <li class="contact-menu">
+            <a href="#" id="contactBtn" data-i18n="contact">تواصل معنا</a>
+
+            <div class="contact-dropdown" id="contactBox">
+              <h4 data-i18n="contact_title">تواصل معنا</h4>
+              <p data-i18n="phone">الهاتف: 📞 0795800510</p>
+              <p data-i18n="email">الايميل: 📧 support@example.com</p>
+            </div>
+          </li>
+
+          <li class="notif-menu">
+            <a href="#" id="notifBtn" data-i18n="notifications">الإشعارات</a>
+
+            <div class="notif-dropdown" id="notifBox">
+              <h4 data-i18n="notifications_title">الإشعارات</h4>
+
+              <div id="notifList">
+                <!-- الإشعارات -->
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="#" id="logoutBtn" data-i18n="logout">تسجيل الخروج</a>
+          </li>
+        </ul>
+
+        <button id="langToggle" class="lang-btn">
+          <i class="fa-solid fa-language"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Supervisor Card -->
+    <div class="supervisor-card">
+      <div class="sup-header">
+        <span data-i18n="academicSupervisor">المشرف الأكاديمي</span>
+      </div>
+
+      <h3 id="supervisorName">اسم المشرف</h3>
+      <p id="supervisorEmail">email@example.com</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+
+      <div class="card">
+        <p data-i18n="trainingCompany">جهة التدريب</p>
+        <h4 id="companyName">---</h4>
+      </div>
+
+      <div class="card">
+        <p data-i18n="trainingStatus">حالة التدريب</p>
+        <span id="trainingStatus" class="status" data-status="active" data-i18n="inProgress">
+          جاري التدريب
+        </span>
+      </div>
+
+      <div class="card">
+        <p data-i18n="completedweeks">الاسابيع المكتملة</p>
+        <h4 id="weeks">5 / 0</h4>
+      </div>
+
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-section">
+      <div class="progress-header">
+        <span data-i18n="progress">نسبة إنجاز التدريب</span>
+        <span id="remainingTime" data-i18n="remainingweeks"></span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress" id="progressBar" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+
+      <a href="evaluation.html" class="action-card">
+        <div class="icon evaluation-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <p data-i18n="evaluation">التقييمات والملاحظات</p>
+        <span class="action-subtext" data-i18n="viewEvaluation">
+          عرض تقييم المشرف
+        </span>
+      </a>
+
+      <a href="weekly-report.html" class="action-card">
+        <div class="icon report-icon">
+          <i class="fa-solid fa-file-lines"></i>
+        </div>
+        <p data-i18n="weeklyReport">رفع تقرير</p>
+        <span class="action-subtext" data-i18n="uploadReport">
+          رفع تقرير التدريب الأسبوعي
+        </span>
+      </a>
+
+      <a href="sup-approval.html" class="action-card">
+        <div class="icon request-icon">
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <p data-i18n="request">تقديم طلب</p>
+        <span class="action-subtext" data-i18n="sendRequest">
+          إرسال طلب للمشرف الأكاديمي
+        </span>
+      </a>
+
+    </div>
+
+    <section class="main-section">
+
+      <h2 class="section-title" data-i18n="selectCompany"></h2>
+
+      <div class="company-list">
+
+        <!-- شركة 1 -->
+        <label class="company-card" data-company="1">
+
+          <div class="company-info">
+            <h3>شركة Dynamics Innovations </h3>
+            <p>شركة ابتكارات ديناميكية للبرمجيات</p>
+
+            <div class="company-meta">
+              <span>📍 عمان</span>
+              <span>⏱ 5 أسابيع</span>
+              <span class="seats"> 4 مقاعد</span>
+            </div>
+          </div>
+
+          <div class="company-icon">🏢</div>
+        </label>
+
+        <!-- شركة 2 -->
+        <label class="company-card" data-company="2">
+
+          <div class="company-info">
+            <h3>شركة Leading Point Software</h3>
+            <p>شركة تطوير برمجيات</p>
+
+            <div class="company-meta">
+              <span>📍 عمان</span>
+              <span>⏱ 5 أسابيع</span>
+              <span class="seats"> 6 مقاعد</span>
+            </div>
+          </div>
+
+          <div class="company-icon">🏢</div>
+        </label>
+
+        <!-- شركة 3 -->
+        <label class="company-card" data-company="3">
+
+          <div class="company-info">
+            <h3>شركة Computec Soluions Cts</h3>
+            <p>مركز لتكنولوجيا المعلومات والتدريب</p>
+
+            <div class="company-meta">
+              <span>📍 اربد</span>
+              <span>⏱ 5 أسابيع</span>
+              <span class="seats"> 3 مقاعد</span>
+            </div>
+          </div>
+
+          <div class="company-icon">🏢</div>
+        </label>
+
+        <!-- شركة 4 -->
+        <label class="company-card" data-company="4">
+
+          <div class="company-info">
+            <h3>شركة SDK Training Center</h3>
+            <p>معهد تدريب وتطوير البرمجيات</p>
+
+            <div class="company-meta">
+              <span>📍 اربد</span>
+              <span>⏱ 5 أسابيع</span>
+              <span class="seats"> 3 مقاعد</span>
+            </div>
+          </div>
+
+          <div class="company-icon">🏢</div>
+        </label>
+
+        <!-- شركة 5 -->
+        <label class="company-card" data-company="5">
+
+          <div class="company-info">
+            <h3>شركة Nixpend</h3>
+            <p>شركة برمجيات توفر حلولا سحابيه</p>
+
+            <div class="company-meta">
+              <span>📍 عمان</span>
+              <span>⏱ 5 أسابيع</span>
+              <span class="seats"> 4 مقاعد</span>
+            </div>
+          </div>
+
+          <div class="company-icon">🏢</div>
+        </label>
+
+        <!-- شركة 6 -->
+        <label class="company-card" data-company="6">
+
+          <div class="company-info">
+            <h3>شركة Maysalward</h3>
+            <p>شركة تطوير العاب الهواتف المحموله</p>
+
+            <div class="company-meta">
+              <span>📍 عمان</span>
+              <span>⏱ 5 أسابيع</span>
+              <span class="seats"> 2 مقاعد</span>
+            </div>
+          </div>
+
+          <div class="company-icon">🏢</div>
+        </label>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <script src="js/translation.js"></script>
+  <script src="js/st-da.js"></script>
+
+
+
+
+</body>
+
+</html>

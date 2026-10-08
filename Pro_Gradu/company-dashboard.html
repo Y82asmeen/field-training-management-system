@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="dashboardTitle">الصفحة الرئيسية | التدريب الميداني</title>
+    <link rel="stylesheet" href="css/company-dashboard.css">
+    <link rel="stylesheet" href="css/welcome.css"> <!-- 👈 ضيفي هذا -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="company-page">
+
+    <!-- 🔝 Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- اليمين (اللوجو + اسم الشركة) -->
+            <div class="nav-logo">
+                <img src="logoo2.png" alt="Logo" class="nav-logo-img">
+                <span id="companyName">اسم الشركة</span>
+            </div>
+
+            <!-- اليسار -->
+            <div class="nav-right">
+
+                <ul class="nav-links">
+                    <li><a href="#" id="logoutBtn" data-i18n="logout">تسجيل الخروج</a></li>
+                </ul>
+                <button id="langToggle" class="lang-btn">
+                    <i class="fa-solid fa-language"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- 📊 Dashboard -->
+    <div class="dashboard">
+
+        <!-- 🔢 Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon yellow">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h2 id="seats">5</h2>
+                <p data-i18n="availableSeats">مقاعد متاحة</p>
+            </div>
+
+            <div class="card">
+                <div class="icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2 id="accepted">4</h2>
+                <p data-i18n="accepted">مقبولين</p>
+            </div>
+
+
+            <div class="card clickable" onclick="goToInterns()">
+                <div class="icon blue">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h2 id="students">0</h2>
+                <p data-i18n="currentInterns">المتدربين الحاليين</p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon orange">
+                    <i class="fa-regular fa-square-check"></i>
+                </div>
+                <h2 id="requests">2</h2>
+                <p data-i18n="incomingRequests">الطلبات الواردة</p>
+            </div>
+
+        </div>
+
+        <!-- 🧑‍🎓 الطلبات -->
+        <div class="section">
+            <h3 data-i18n="trainingRequests">طلبات التدريب</h3>
+            <div id="requestsContainer"></div>
+        </div>
+
+
+        <!-- 📢 اعلان الشركة -->
+        <div class="section">
+            <h3 data-i18n="publishAd">نشر إعلان</h3>
+
+            <input type="text" id="title" data-i18n-placeholder="companyNamePlaceholder" placeholder="اسم الشركة">
+            <textarea id="desc" data-i18n-placeholder="companyDescPlaceholder" placeholder="نبذة عن الشركة"></textarea>
+
+            <div class="row">
+                <input type="text" id="location" data-i18n-placeholder="location" placeholder="الموقع">
+                <input type="number" id="weeks" data-i18n-placeholder="weeks" placeholder="عدد الأسابيع">
+                <input type="number" id="seatsInput" data-i18n-placeholder="seats" placeholder="عدد المقاعد">
+            </div>
+
+            <button id="publishBtn" data-i18n="publishBtn">نشر الإعلان</button>
+        </div>
+
+    </div>
+
+    <script src="js/translation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/company-dashboard.js"></script>
+
+
+</body>
+
+</html>

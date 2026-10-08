@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="login">تسجيل الدخول</title>
+
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="register-page" dir="rtl">
+
+    <div id="navbar"></div>
+
+    <div class="register-container">
+
+        <img src="logoo2.png" class="register-logo" alt="Logo">
+
+        <h2 data-i18n="login">تسجيل الدخول</h2>
+
+        <!-- الفورم -->
+        <form id="loginForm">
+
+            <label data-i18n="email">البريد الإلكتروني</label>
+            <input type="email" id="email" required>
+
+            <label data-i18n="password">كلمة المرور</label>
+            <div class="password-field">
+                <input type="password" id="password" required>
+                <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+            </div>
+
+            <button type="submit" data-i18n="login">تسجيل الدخول</button>
+
+            <p class="login-link">
+                ليس لديك حساب؟
+                <a href="register.html">إنشاء حساب</a>
+            </p>
+
+        </form>
+
+    </div>
+
+    <script src="js/translation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+</html>

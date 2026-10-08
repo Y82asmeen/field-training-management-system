@@ -1,0 +1,169 @@
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: "Cairo", sans-serif;
+
+    background-color: #cbffd4;
+}
+
+
+/* الصفحة */
+.evaluation-page {
+
+    max-width: 800px;
+
+    margin: 50px auto;
+
+    padding: 3px;
+}
+
+
+/* الهيدر */
+.page-header {
+
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+
+    color: #1b5528;
+
+    margin-bottom: 10px;
+
+    font-size: 37px;
+}
+
+.page-header p {
+
+    color: #3c3c3c;
+
+    font-size: 20px;
+}
+
+
+/* الكرت */
+.evaluation-card {
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+
+/* الأقسام */
+.rating-section,
+.feedback-section {
+
+    margin-bottom: 30px;
+}
+
+
+/* الليبل */
+label {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-weight: 700;
+
+    color: #333;
+}
+
+
+/* النجوم */
+.stars {
+
+    display: flex;
+
+    gap: 12px;
+
+    font-size: 32px;
+
+    color: #f4b400;
+
+    cursor: pointer;
+}
+
+.star {
+
+    transition: 0.2s;
+}
+
+.star:hover {
+
+    transform: scale(1.15);
+}
+
+
+/* textarea */
+textarea {
+
+    width: 100%;
+
+    min-height: 180px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ccc;
+
+    resize: vertical;
+
+    font-size: 15px;
+
+    font-family: "Cairo", sans-serif;
+
+    box-sizing: border-box;
+}
+
+textarea:focus {
+
+    outline: none;
+
+    border-color: #64da80;
+}
+
+
+/* زر الحفظ */
+.save-btn {
+
+    background-color: #1f5f2e;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.save-btn:hover {
+
+    background-color: #2d7a3f;
+
+    transform: translateY(-2px);
+}

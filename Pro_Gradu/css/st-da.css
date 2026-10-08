@@ -1,0 +1,161 @@
+/* =========================
+   🏷️ Page Title (Evaluation)
+========================= */
+.section-title {
+  text-align: center;
+  font-size: 35px;          /* كبرنا الخط */
+  font-weight: 700;
+  color: #111827;
+  margin: 40px 0 25px;      /* ⬅️ أهم شيء: مساحة فوق وتحت */
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+/* خط تحت العنوان */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 4px;
+  background: linear-gradient(90deg,#db7822, #4f46e5, #22c55e);
+  margin: 12px auto 0;
+  border-radius: 10px;
+}
+
+/* =========================
+   📦 Evaluation Container
+========================= */
+.evaluation-container {
+  max-width: 2000px; /* كبرنا العرض شوي */
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* =========================
+   🧾 Evaluation Card
+========================= */
+.evaluation-card {
+  background: #f2f4ff;
+  border-radius: 20px;
+  padding: 35px; /* ⬅️ كبرنا المساحة الداخلية */
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  border-left: 7px solid #4f46e5;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.evaluation-card:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   📌 Top Section
+========================= */
+.evaluation-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* =========================
+   📘 Week + Info
+========================= */
+.evaluation-details h3 {
+  margin: 5%;
+  font-size: 25px; /* ⬅️ كبرنا العنوان */
+  color: #111827;
+}
+
+.evaluation-details small {
+  font-size: 15px;
+  color: #2e374a;
+}
+
+/* =========================
+   ⭐ Stars
+========================= */
+.stars {
+  margin-top: 10px;
+  font-size: 18px; /* كبرنا النجوم */
+  color: #fbbf24;
+}
+
+/* =========================
+   🏷️ Status Pill
+========================= */
+.status-pill {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.status-pill.done {
+  background: #9dffbf;
+  color: #0b4120;
+}
+
+.status-pill.pending {
+  background: #ffe190;
+  color: #4b2b07;
+}
+
+/* =========================
+   ⏱ Icon Box
+========================= */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.icon-box.done {
+  background: #9dffbf;
+  color: #0b4120;
+}
+
+.icon-box.pending {
+  background: #ffe190;
+  color: #f59e0b;
+}
+
+/* =========================
+   📝 Feedback Box
+========================= */
+.feedback-box {
+  margin-top: 16px;
+  padding: 16px;
+  background: #e4e8ec;
+  border-radius: 14px;
+  border: 1px solid #bfd0f3;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* تحسين للـ mobile */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 22px;
+    margin: 30px 0 20px;
+  }
+}
+
+/* =========================
+   🧠 ملاحظة (للتعديل مستقبلاً)
+========================= */
+/*
+- evaluation-card → الكرت كامل
+- evaluation-details → نص الأسبوع والمعلومات
+- status-pill → حالة التدريب
+- icon-box → الأيقونة الدائرية
+- feedback-box → ملاحظات المشرف
+*/
